@@ -5,35 +5,115 @@ const portfolio = {
         linkedin: "https://www.linkedin.com/in/shainag3",
         website: "https://www.shainagonzalesdesigns.com"
     },
-    filters: ["All", "Full-Stack", "UX/UI", "Data & AI"],
-    projects: [
+    featuredCase: {
+        title: "Electron Chatbot",
+        subtitle: "Enterprise AI Assistant Platform",
+        role: "Full-Stack Developer & UX/UI Lead",
+        company: "General Motors",
+        technologies: ["JavaScript", "AI/LLM Integrations", "Enterprise APIs", "Database Systems", "Front-End Development"],
+        challenge: "Employees across the organization were spending significant portions of their workday manually searching for information, resources, and internal tools. The goal was to introduce one of GM's first enterprise AI-powered assistant platforms to improve productivity, streamline workflows, and centralize information access through conversational AI.",
+        contributions: [
+            "Collaborated with a cross-functional development team to implement one of GM's first enterprise AI chatbot experiences.",
+            "Contributed to front-end functionality and AI-driven workflow implementation.",
+            "Helped create scalable conversational interfaces for enterprise users.",
+            "Participated in enterprise system integration and intelligent workflow planning.",
+            "Supported usability and interaction design for daily employee use."
+        ],
+        features: [
+            "AI-powered conversational assistant",
+            "Large Language Model integration",
+            "Enterprise knowledge retrieval",
+            "Internal resource and workflow assistance",
+            "Intelligent search and navigation support",
+            "Daily productivity enhancement tools"
+        ],
+        focus: [
+            "AI-driven functionality",
+            "Enterprise data accessibility",
+            "User-centered interaction design",
+            "Performance and scalability",
+            "Cross-system integration"
+        ],
+        outcome: "The Electron Chatbot improved operational efficiency by reducing the time employees spent locating information and navigating internal systems. The platform became actively used in daily workflows and demonstrated the value of AI integration within enterprise environments."
+    },
+    gmProjects: [
         {
-            title: "Secure Enterprise Applications",
-            category: "Full-Stack",
-            tag: "General Motors",
-            summary: "Developed secure internal applications in a firewall-restricted enterprise environment, supporting sensitive data workflows across frontend, backend, APIs, and database integration.",
-            details: ["Angular", "REST APIs", "SQL", "Azure"]
+            title: "Enterprise Gamification & Learning Platform",
+            role: "Lead UX/UI Designer & Full-Stack Developer",
+            technologies: ["Angular", "React", "JavaScript", "SQL", "Figma"],
+            challenge: "GM wanted to modernize employee engagement and internal learning through a centralized gamification platform for events, resources, leaderboards, and interactive company initiatives.",
+            contributions: [
+                "Selected as the lead UX/UI designer and designed the full platform from concept to production.",
+                "Created wireframes, user flows, prototypes, and high-fidelity Figma designs.",
+                "Led front-end implementation and collaborated with backend and database teams on SQL integration."
+            ],
+            features: ["Employee profiles", "Competitive leaderboards", "Video-based learning", "Event tracking", "Interactive educational content"],
+            outcome: "Modernized employee engagement and learning by creating a more interactive, accessible environment for internal participation and education."
         },
         {
-            title: "Workflow UX & Dealership Tools",
-            category: "UX/UI",
-            tag: "Product UX",
-            summary: "Designed and built end-to-end user interfaces for internal platforms and dealership-facing applications, reducing manual work and cutting task completion time by approximately 50%.",
-            details: ["Wireframes", "Responsive UI", "Usability", "Accessibility"]
+            title: "Broadcasting Services Event Management Platform",
+            role: "UX/UI Designer & Front-End Developer",
+            technologies: ["React", "JavaScript", "SQL", "Azure", "Terraform", "GitHub"],
+            challenge: "Broadcasting services teams needed a centralized platform for enterprise live events, executive broadcasts, production scheduling, approvals, and administrative oversight.",
+            contributions: [
+                "Designed the full UX/UI experience, including wireframes, interactive prototypes, and high-fidelity UI systems.",
+                "Designed complex calendar workflows, multi-view scheduling systems, and role-based experiences.",
+                "Contributed heavily to front-end implementation and collaborated with backend and database teams."
+            ],
+            features: ["Multi-view calendar", "Event requests and approvals", "Admin dashboards", "Role-based visibility", "Live event coordination"],
+            outcome: "Modernized enterprise event coordination and created a more scalable scheduling process for administrators and standard users."
         },
         {
-            title: "Analytics Dashboards & AI Features",
-            category: "Data & AI",
-            tag: "Insights",
-            summary: "Created Power BI dashboards, optimized complex SQL queries, and integrated AI-driven features including chat assistance, workflow automation, intelligent insights, and recommendations.",
-            details: ["Power BI", "SQL", "AI Integration", "Automation"]
+            title: "GM Announce",
+            role: "UX/UI Designer & Full-Stack Contributor",
+            technologies: ["Enterprise Web Technologies", "Notification Systems", "Database-Driven Architecture"],
+            challenge: "GM needed a more personalized internal communication system to reduce reliance on mass email distribution and help employees subscribe to relevant organizational updates.",
+            contributions: [
+                "Contributed to UX/UI design, platform architecture, and scalable communication workflows.",
+                "Supported enterprise notification, subscription, and communication filtering experiences.",
+                "Contributed to front-end and database-driven functionality."
+            ],
+            features: ["Personalized subscriptions", "Department filtering", "Announcement dashboard", "Notification preferences", "Executive communications"],
+            outcome: "Reduced unnecessary email volume while improving how employees accessed important updates through a centralized communication hub."
         },
         {
-            title: "Business Website & Brand Experience",
-            category: "UX/UI",
-            tag: "All American Petting Zoo",
-            summary: "Designed and developed a full website with wireframes, branding, custom client-facing tools, content updates, photography, and marketing assets to support business growth.",
-            details: ["Web Design", "Branding", "Market Research", "Content"]
+            title: "ASA Platform",
+            role: "Lead UX/UI Designer & Full-Stack Contributor",
+            technologies: ["Angular", "JavaScript", "SQL", "Enterprise Database Systems"],
+            challenge: "The ASA platform supported technical infrastructure workflows involving environment management, node creation, IP configuration, and enterprise device comparison.",
+            contributions: [
+                "Led UX/UI design and created wireframes, interaction flows, and interface architecture.",
+                "Designed workflows for managing nodes, environments, devices, and gold source comparison systems.",
+                "Collaborated with backend and database teams on technical implementation."
+            ],
+            features: ["Environment management", "Node workflows", "IP configuration", "Device comparison", "Technical dashboards"],
+            outcome: "Improved how technical teams managed and compared infrastructure systems across GM's global environment."
+        },
+        {
+            title: "ISE Platform",
+            role: "UX/UI Designer & Full-Stack Developer",
+            technologies: ["React", "Python", "JavaScript", "SQL", "Analytics & Visualization Systems"],
+            challenge: "The ISE project required a centralized analytics dashboard for visualizing infrastructure data, servers, IP systems, and global network environments.",
+            contributions: [
+                "Designed and developed dashboard interfaces, workflows, and analytics-focused UI systems.",
+                "Created interactive map-based infrastructure visualizations and scalable data visualization experiences.",
+                "Contributed to front-end implementation and backend collaboration around node and ICE cluster workflows."
+            ],
+            features: ["Global maps", "Server and IP tracking", "Dynamic dashboards", "Filtering systems", "ICE cluster management"],
+            outcome: "Improved enterprise infrastructure visibility through scalable, data-driven visual experiences for monitoring and managing global systems."
+        },
+        {
+            title: "TAD Platform",
+            role: "API Integration & UX/UI Contributor",
+            technologies: ["APIs", "JavaScript", "Slack Integrations", "Confluence Integrations", "Enterprise Workflow Systems"],
+            challenge: "GM's firewall request process historically required lengthy approval cycles and manual workflows that could take up to two months.",
+            contributions: [
+                "Contributed to workflow planning, process visualization, and automation strategy.",
+                "Researched and integrated enterprise APIs across Slack, Confluence, Gleam, and additional systems.",
+                "Helped identify automation opportunities and supported the technical groundwork for system development."
+            ],
+            features: ["Firewall request workflows", "Enterprise API integrations", "Workflow automation", "Cross-platform orchestration", "Infrastructure request optimization"],
+            outcome: "Helped reduce firewall processing timelines from months to days through centralized workflow automation and cross-system integration planning."
         }
     ],
     experience: [
@@ -120,43 +200,84 @@ const portfolio = {
     ]
 };
 
-let activeFilter = "All";
+function renderFeaturedCase() {
+    const caseContainer = document.querySelector(".featured-case");
+    const project = portfolio.featuredCase;
 
-function renderFilters() {
-    const filterBar = document.querySelector(".filter-bar");
-
-    filterBar.innerHTML = portfolio.filters.map((filter) => `
-        <button class="filter-button${filter === activeFilter ? " is-active" : ""}" type="button" data-filter="${filter}">
-            ${filter}
-        </button>
-    `).join("");
-
-    filterBar.querySelectorAll("button").forEach((button) => {
-        button.addEventListener("click", () => {
-            activeFilter = button.dataset.filter;
-            renderFilters();
-            renderProjects();
-        });
-    });
+    caseContainer.innerHTML = `
+        <article class="case-feature">
+            <div class="case-hero">
+                <p class="case-label">Featured Case Study</p>
+                <h3>${project.title}</h3>
+                <p class="case-subtitle">${project.subtitle}</p>
+                <dl class="case-facts">
+                    <div>
+                        <dt>Role</dt>
+                        <dd>${project.role}</dd>
+                    </div>
+                    <div>
+                        <dt>Company</dt>
+                        <dd>${project.company}</dd>
+                    </div>
+                </dl>
+                <div class="project-meta">
+                    ${project.technologies.map((item) => `<span>${item}</span>`).join("")}
+                </div>
+            </div>
+            <div class="case-detail">
+                <section>
+                    <h4>The Challenge</h4>
+                    <p>${project.challenge}</p>
+                </section>
+                <section>
+                    <h4>My Contributions</h4>
+                    <ul>${project.contributions.map((item) => `<li>${item}</li>`).join("")}</ul>
+                </section>
+                <section>
+                    <h4>Key Features</h4>
+                    <div class="feature-list">${project.features.map((item) => `<span>${item}</span>`).join("")}</div>
+                </section>
+                <section>
+                    <h4>Technical & Design Focus</h4>
+                    <div class="feature-list">${project.focus.map((item) => `<span>${item}</span>`).join("")}</div>
+                </section>
+                <section class="outcome-block">
+                    <h4>The Outcome</h4>
+                    <p>${project.outcome}</p>
+                </section>
+            </div>
+        </article>
+    `;
 }
 
-function renderProjects() {
-    const projectGrid = document.querySelector(".project-grid");
-    const visibleProjects = activeFilter === "All"
-        ? portfolio.projects
-        : portfolio.projects.filter((project) => project.category === activeFilter);
+function renderGMProjects() {
+    const caseGrid = document.querySelector(".case-study-grid");
 
-    projectGrid.innerHTML = visibleProjects.map((project) => `
-        <article class="project-card">
-            <div class="project-visual">
-                <span class="project-tag">${project.tag}</span>
-            </div>
-            <div class="project-body">
+    caseGrid.innerHTML = portfolio.gmProjects.map((project) => `
+        <article class="case-card">
+            <div class="case-card-heading">
+                <p>General Motors</p>
                 <h3>${project.title}</h3>
-                <p>${project.summary}</p>
-                <div class="project-meta">
-                    ${project.details.map((detail) => `<span>${detail}</span>`).join("")}
-                </div>
+                <strong>${project.role}</strong>
+            </div>
+            <div class="project-meta">
+                ${project.technologies.map((item) => `<span>${item}</span>`).join("")}
+            </div>
+            <div class="case-card-section">
+                <h4>Challenge</h4>
+                <p>${project.challenge}</p>
+            </div>
+            <div class="case-card-section">
+                <h4>Contributions</h4>
+                <ul>${project.contributions.map((item) => `<li>${item}</li>`).join("")}</ul>
+            </div>
+            <div class="case-card-section">
+                <h4>Key Features</h4>
+                <div class="feature-list">${project.features.map((item) => `<span>${item}</span>`).join("")}</div>
+            </div>
+            <div class="outcome-block">
+                <h4>Outcome</h4>
+                <p>${project.outcome}</p>
             </div>
         </article>
     `).join("");
@@ -218,8 +339,8 @@ function show() {
 }
 
 function initPortfolio() {
-    renderFilters();
-    renderProjects();
+    renderFeaturedCase();
+    renderGMProjects();
     renderExperience();
     renderProcess();
     renderSkills();
