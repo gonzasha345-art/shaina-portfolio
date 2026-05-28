@@ -169,6 +169,7 @@ main {
 .section {
     padding-right: clamp(18px, 5vw, 64px);
     padding-left: clamp(18px, 5vw, 64px);
+    scroll-margin-top: 150px;
 }
 
 .hero {
@@ -478,6 +479,15 @@ h3 {
     font-size: 1.08rem;
 }
 
+.section-note {
+    max-width: 920px;
+    padding: 16px 18px;
+    border-left: 4px solid var(--cyan);
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.78);
+    box-shadow: var(--shadow-soft);
+}
+
 .impact-section {
     background: rgba(255, 255, 255, 0.62);
 }
@@ -530,6 +540,34 @@ h3 {
     background:
         linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(246, 242, 255, 0.88)),
         var(--paper);
+}
+
+.work-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    max-width: var(--max);
+    margin: 0 auto 20px;
+}
+
+.work-summary-grid article {
+    display: grid;
+    gap: 8px;
+    padding: 18px;
+    border: 1px solid rgba(76, 29, 149, 0.13);
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: var(--shadow-soft);
+}
+
+.work-summary-grid strong {
+    color: var(--plum);
+    font-size: 1.02rem;
+}
+
+.work-summary-grid span {
+    color: var(--muted);
+    font-weight: 750;
 }
 
 .case-feature {
@@ -1072,6 +1110,7 @@ h3 {
     }
 
     .impact-grid,
+    .work-summary-grid,
     .case-study-grid,
     .experience-grid,
     .process-grid {
@@ -1113,6 +1152,7 @@ h3 {
 
     .dashboard-grid,
     .impact-grid,
+    .work-summary-grid,
     .case-study-grid,
     .design-detail-grid,
     .experience-grid,

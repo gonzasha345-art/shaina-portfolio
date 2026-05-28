@@ -9,7 +9,7 @@ const portfolio = {
         {
             value: "6",
             title: "Enterprise Product Areas",
-            text: "AI assistants, event platforms, gamified learning, communications, infrastructure dashboards, and workflow automation."
+            text: "Selected highlights from a broader GM portfolio: AI assistants, event platforms, learning tools, communications, dashboards, and automation."
         },
         {
             value: "3.5",
@@ -23,8 +23,8 @@ const portfolio = {
         },
         {
             value: "UX + SQL",
-            title: "Design-to-Data Range",
-            text: "Comfort moving from wireframes and UI systems into front-end implementation, APIs, SQL, and reporting."
+            title: "Frontend-to-Backend Range",
+            text: "Comfort moving from wireframes and UI systems into frontend implementation, backend services, APIs, SQL, and reporting."
         }
     ],
     featuredCase: {
@@ -32,13 +32,13 @@ const portfolio = {
         subtitle: "Enterprise AI Assistant Platform",
         role: "Full-Stack Developer & UX/UI Lead",
         company: "General Motors",
-        technologies: ["JavaScript", "AI/LLM Integrations", "Enterprise APIs", "Database Systems", "Front-End Development"],
+        technologies: ["JavaScript", "AI/LLM Integrations", "Enterprise APIs", "Backend Services", "Database Systems", "Full-Stack Development"],
         challenge: "Employees across the organization were spending significant portions of their workday manually searching for information, resources, and internal tools. The goal was to introduce one of GM's first enterprise AI-powered assistant platforms to improve productivity, streamline workflows, and centralize information access through conversational AI.",
         contributions: [
             "Collaborated with a cross-functional development team to implement one of GM's first enterprise AI chatbot experiences.",
-            "Contributed to front-end functionality and AI-driven workflow implementation.",
+            "Contributed to frontend functionality, backend/API integration planning, and AI-driven workflow implementation.",
             "Helped create scalable conversational interfaces for enterprise users.",
-            "Participated in enterprise system integration and intelligent workflow planning.",
+            "Participated in enterprise system integration, database-backed workflow thinking, and intelligent workflow planning.",
             "Supported usability and interaction design for daily employee use."
         ],
         features: [
@@ -67,20 +67,20 @@ const portfolio = {
             contributions: [
                 "Selected as the lead UX/UI designer and designed the full platform from concept to production.",
                 "Created wireframes, user flows, prototypes, and high-fidelity Figma designs.",
-                "Led front-end implementation and collaborated with backend and database teams on SQL integration."
+                "Led frontend implementation while collaborating with backend and database teams on SQL integration."
             ],
             features: ["Employee profiles", "Competitive leaderboards", "Video-based learning", "Event tracking", "Interactive educational content"],
             outcome: "Modernized employee engagement and learning by creating a more interactive, accessible environment for internal participation and education."
         },
         {
             title: "Broadcasting Services Event Management Platform",
-            role: "UX/UI Designer & Front-End Developer",
+            role: "UX/UI Designer & Full-Stack Developer",
             technologies: ["React", "JavaScript", "SQL", "Azure", "Terraform", "GitHub"],
             challenge: "Broadcasting services teams needed a centralized platform for enterprise live events, executive broadcasts, production scheduling, approvals, and administrative oversight.",
             contributions: [
                 "Designed the full UX/UI experience, including wireframes, interactive prototypes, and high-fidelity UI systems.",
                 "Designed complex calendar workflows, multi-view scheduling systems, and role-based experiences.",
-                "Contributed heavily to front-end implementation and collaborated with backend and database teams."
+                "Contributed heavily to frontend implementation while collaborating with backend, API, infrastructure, and database teams."
             ],
             features: ["Multi-view calendar", "Event requests and approvals", "Admin dashboards", "Role-based visibility", "Live event coordination"],
             outcome: "Modernized enterprise event coordination and created a more scalable scheduling process for administrators and standard users."
@@ -93,7 +93,7 @@ const portfolio = {
             contributions: [
                 "Contributed to UX/UI design, platform architecture, and scalable communication workflows.",
                 "Supported enterprise notification, subscription, and communication filtering experiences.",
-                "Contributed to front-end and database-driven functionality."
+                "Contributed to frontend behavior, backend-supported workflows, and database-driven functionality."
             ],
             features: ["Personalized subscriptions", "Department filtering", "Announcement dashboard", "Notification preferences", "Executive communications"],
             outcome: "Reduced unnecessary email volume while improving how employees accessed important updates through a centralized communication hub."
@@ -106,7 +106,7 @@ const portfolio = {
             contributions: [
                 "Led UX/UI design and created wireframes, interaction flows, and interface architecture.",
                 "Designed workflows for managing nodes, environments, devices, and gold source comparison systems.",
-                "Collaborated with backend and database teams on technical implementation."
+                "Collaborated with backend, API, and database teams on technical implementation."
             ],
             features: ["Environment management", "Node workflows", "IP configuration", "Device comparison", "Technical dashboards"],
             outcome: "Improved how technical teams managed and compared infrastructure systems across GM's global environment."
@@ -119,14 +119,14 @@ const portfolio = {
             contributions: [
                 "Designed and developed dashboard interfaces, workflows, and analytics-focused UI systems.",
                 "Created interactive map-based infrastructure visualizations and scalable data visualization experiences.",
-                "Contributed to front-end implementation and backend collaboration around node and ICE cluster workflows."
+                "Contributed to frontend implementation, backend collaboration, and data workflow planning around node and ICE cluster systems."
             ],
             features: ["Global maps", "Server and IP tracking", "Dynamic dashboards", "Filtering systems", "ICE cluster management"],
             outcome: "Improved enterprise infrastructure visibility through scalable, data-driven visual experiences for monitoring and managing global systems."
         },
         {
             title: "TAD Platform",
-            role: "API Integration & UX/UI Contributor",
+            role: "API Integration & Full-Stack UX Contributor",
             technologies: ["APIs", "JavaScript", "Slack Integrations", "Confluence Integrations", "Enterprise Workflow Systems"],
             challenge: "GM's firewall request process historically required lengthy approval cycles and manual workflows that could take up to two months.",
             contributions: [
@@ -180,7 +180,7 @@ const portfolio = {
         outcome: "This work translated complex organizational messaging into visually impactful experiences that quickly captured attention and communicated information effectively. Teams and stakeholders gave positive feedback on the creativity, professionalism, and visual impact of the work."
     },
     skillBars: [
-        { label: "Front-End Product UI", level: 92 },
+        { label: "Full-Stack Product Engineering", level: 92 },
         { label: "UX/UI Systems", level: 94 },
         { label: "Data + SQL", level: 84 },
         { label: "AI Workflow Thinking", level: 80 },
@@ -189,11 +189,11 @@ const portfolio = {
     experience: [
         {
             company: "General Motors",
-            role: "Software Engineer",
+            role: "Full-Stack Software Engineer",
             dates: "January 2023 - May 2026",
             highlights: [
                 "Owned projects end-to-end, translating business and user needs into wireframes, intuitive interfaces, scalable application solutions, and database-backed workflows.",
-                "Built responsive frontend interfaces, backend services, third-party API integrations, complex SQL queries, and Power BI reporting dashboards.",
+                "Built responsive frontend interfaces, supported backend services, integrated third-party APIs, wrote complex SQL queries, and created Power BI reporting dashboards.",
                 "Integrated AI-driven functionality for chat-based assistance, workflow automation, intelligent insights, and recommendation experiences."
             ]
         },
@@ -559,6 +559,22 @@ function setupRevealAnimations() {
     revealItems.forEach((item) => observer.observe(item));
 }
 
+function settleInitialHash() {
+    if (!window.location.hash) {
+        return;
+    }
+
+    const target = document.querySelector(window.location.hash);
+
+    if (!target) {
+        return;
+    }
+
+    window.setTimeout(() => {
+        target.scrollIntoView({ block: "start" });
+    }, 100);
+}
+
 function show() {
     // Called by the Safari extension host after page load. The portfolio page does not need extension state.
 }
@@ -575,6 +591,7 @@ function initPortfolio() {
     setupContactActions();
     setupRevealAnimations();
     animateCounters();
+    settleInitialHash();
 }
 
 document.addEventListener("DOMContentLoaded", initPortfolio);
