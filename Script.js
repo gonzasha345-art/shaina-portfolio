@@ -138,6 +138,107 @@ const portfolio = {
             outcome: "Helped reduce firewall processing timelines from months to days through centralized workflow automation and cross-system integration planning."
         }
     ],
+    deepDives: [
+        {
+            id: "case-electron-chatbot",
+            title: "Electron Chatbot",
+            subtitle: "Enterprise AI Assistant Platform",
+            role: "Full-Stack Developer & UX/UI Lead",
+            summary: "A deeper case study for one of the strongest AI + enterprise productivity stories in the portfolio.",
+            sections: [
+                {
+                    title: "Problem",
+                    text: "Employees needed a faster way to find internal information, resources, and workflow support without manually searching across multiple enterprise systems."
+                },
+                {
+                    title: "My Full-Stack Scope",
+                    text: "Contributed across frontend interaction work, backend/API integration planning, database-backed workflow thinking, AI assistant behavior, and usability support for daily employee use."
+                },
+                {
+                    title: "UX/UI Decisions",
+                    text: "Focused on making the assistant feel approachable, useful, and easy to navigate so employees could move from question to answer with less friction."
+                },
+                {
+                    title: "Backend, Data & AI",
+                    text: "Supported enterprise system integration thinking, AI/LLM workflow planning, knowledge retrieval patterns, and scalable data accessibility."
+                },
+                {
+                    title: "Experience Gained",
+                    text: "Strengthened experience with AI-powered product workflows, cross-system integration, enterprise usability, and full-stack collaboration."
+                },
+                {
+                    title: "Outcome",
+                    text: "Helped demonstrate the value of enterprise AI by improving how employees located information and navigated internal resources."
+                }
+            ]
+        },
+        {
+            id: "case-broadcasting-platform",
+            title: "Broadcasting Services Event Management Platform",
+            subtitle: "Enterprise Live Event & Scheduling System",
+            role: "UX/UI Designer & Full-Stack Developer",
+            summary: "A deeper case study for showing complex product workflows, role-based UX, frontend execution, and backend/database collaboration.",
+            sections: [
+                {
+                    title: "Problem",
+                    text: "Broadcasting services teams needed a centralized system for live events, executive broadcasts, production scheduling, approvals, and administration."
+                },
+                {
+                    title: "My Full-Stack Scope",
+                    text: "Designed the UX/UI, contributed to frontend implementation, and collaborated with backend, API, infrastructure, and database teams."
+                },
+                {
+                    title: "UX/UI Decisions",
+                    text: "Created workflows for multi-view calendars, event requests, approvals, role-based visibility, and administrative oversight."
+                },
+                {
+                    title: "Backend & Data Collaboration",
+                    text: "Worked around SQL-backed workflows, event data, admin visibility, and scalable scheduling logic with technical teams."
+                },
+                {
+                    title: "Experience Gained",
+                    text: "Gained deeper experience turning complex operational requirements into usable full-stack product flows."
+                },
+                {
+                    title: "Outcome",
+                    text: "Helped modernize enterprise event coordination and created a more scalable scheduling process for administrators and standard users."
+                }
+            ]
+        },
+        {
+            id: "case-ise-platform",
+            title: "ISE Platform",
+            subtitle: "Infrastructure Analytics & Visualization Dashboard",
+            role: "UX/UI Designer & Full-Stack Developer",
+            summary: "A deeper case study for proving data visualization, backend collaboration, analytics thinking, and technical dashboard experience.",
+            sections: [
+                {
+                    title: "Problem",
+                    text: "Technical teams needed a centralized dashboard for infrastructure data, servers, IP systems, nodes, ICE clusters, and global network visibility."
+                },
+                {
+                    title: "My Full-Stack Scope",
+                    text: "Designed and developed dashboard interfaces while collaborating around backend systems, data workflows, node logic, and analytics-focused UI patterns."
+                },
+                {
+                    title: "UX/UI Decisions",
+                    text: "Focused on making dense infrastructure information more scannable through maps, filters, dashboards, and visualization patterns."
+                },
+                {
+                    title: "Backend & Data Work",
+                    text: "Worked with SQL, analytics concepts, infrastructure data structures, server/IP information, and backend collaboration around technical workflows."
+                },
+                {
+                    title: "Experience Gained",
+                    text: "Expanded experience with data-heavy enterprise products, visualization systems, and technical users managing complex infrastructure environments."
+                },
+                {
+                    title: "Outcome",
+                    text: "Improved infrastructure visibility through scalable, data-driven visual experiences for monitoring and managing global systems."
+                }
+            ]
+        }
+    ],
     designExperience: {
         title: "Enterprise Digital Display & Brand Experience Design",
         summary: "Alongside software engineering and full-stack development responsibilities at General Motors, I contributed extensively to enterprise visual design, digital branding, and large-scale internal communication experiences across GM's global environment.",
@@ -278,6 +379,16 @@ const portfolio = {
     ]
 };
 
+function caseStudyLink(title) {
+    const match = portfolio.deepDives.find((study) => study.title === title);
+
+    if (!match) {
+        return "";
+    }
+
+    return `<a class="text-link" href="#${match.id}">Read deeper case study</a>`;
+}
+
 function renderImpact() {
     const impactGrid = document.querySelector(".impact-grid");
 
@@ -345,6 +456,7 @@ function renderFeaturedCase() {
                     <h4>The Outcome</h4>
                     <p>${project.outcome}</p>
                 </section>
+                ${caseStudyLink(project.title)}
             </div>
         </article>
     `;
@@ -380,6 +492,37 @@ function renderGMProjects() {
             <div class="outcome-block">
                 <h4>Outcome</h4>
                 <p>${project.outcome}</p>
+            </div>
+            ${caseStudyLink(project.title)}
+        </article>
+    `).join("");
+}
+
+function renderDeepDives() {
+    const deepDiveGrid = document.querySelector(".deep-dive-grid");
+
+    if (!deepDiveGrid) {
+        return;
+    }
+
+    deepDiveGrid.innerHTML = portfolio.deepDives.map((study) => `
+        <article class="deep-dive-card reveal" id="${study.id}">
+            <div class="deep-dive-head">
+                <div>
+                    <p class="case-label">Detailed Case Study</p>
+                    <h3>${study.title}</h3>
+                    <strong>${study.subtitle}</strong>
+                </div>
+                <span>${study.role}</span>
+            </div>
+            <p class="deep-dive-summary">${study.summary}</p>
+            <div class="deep-dive-sections">
+                ${study.sections.map((section) => `
+                    <section>
+                        <h4>${section.title}</h4>
+                        <p>${section.text}</p>
+                    </section>
+                `).join("")}
             </div>
         </article>
     `).join("");
@@ -584,6 +727,7 @@ function initPortfolio() {
     renderDesignExperience();
     renderFeaturedCase();
     renderGMProjects();
+    renderDeepDives();
     renderSkillBars();
     renderSkills();
     renderExperience();
