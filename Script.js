@@ -33,13 +33,13 @@ const portfolio = {
         role: "Full-Stack Developer & UX/UI Lead",
         company: "General Motors",
         technologies: ["JavaScript", "AI/LLM Integrations", "Enterprise APIs", "Backend Services", "Database Systems", "Full-Stack Development"],
-        challenge: "Employees across the organization were spending significant portions of their workday manually searching for information, resources, and internal tools. The goal was to introduce one of GM's first enterprise AI-powered assistant platforms to improve productivity, streamline workflows, and centralize information access through conversational AI.",
+        challenge: "Employees across the organization spent significant portions of the workday manually searching for information, internal resources, and workflow support. Electron Chatbot introduced LLM-powered assistance into the GM workplace to improve efficiency, accelerate information retrieval, and modernize internal workflows.",
         contributions: [
             "Collaborated with a cross-functional development team to implement one of GM's first enterprise AI chatbot experiences.",
-            "Contributed to frontend functionality, backend/API integration planning, and AI-driven workflow implementation.",
-            "Helped create scalable conversational interfaces for enterprise users.",
-            "Participated in enterprise system integration, database-backed workflow thinking, and intelligent workflow planning.",
-            "Supported usability and interaction design for daily employee use."
+            "Helped bring the platform from concept to production by contributing to implementation and overall system functionality.",
+            "Contributed to modern frontend development, backend integration, AI-driven workflows, and enterprise usability considerations.",
+            "Supported scalable conversational interfaces employees could rely on in daily workflows.",
+            "Participated in cross-functional Agile development around enterprise AI productivity tooling."
         ],
         features: [
             "AI-powered conversational assistant",
@@ -56,7 +56,7 @@ const portfolio = {
             "Performance and scalability",
             "Cross-system integration"
         ],
-        outcome: "The Electron Chatbot improved operational efficiency by reducing the time employees spent locating information and navigating internal systems. The platform became actively used in daily workflows and demonstrated the value of AI integration within enterprise environments."
+        outcome: "The Electron Chatbot significantly reduced the time employees spent locating information and completing repetitive search-related tasks. The platform became actively used in daily workflows and demonstrated the practical value of AI integration within a large enterprise environment."
     },
     gmProjects: [
         {
@@ -144,31 +144,58 @@ const portfolio = {
             title: "Electron Chatbot",
             subtitle: "Enterprise AI Assistant Platform",
             role: "Full-Stack Developer & UX/UI Lead",
-            summary: "A deeper case study for one of the strongest AI + enterprise productivity stories in the portfolio.",
+            summary: "At General Motors, I contributed to the development and implementation of one of the company's first enterprise AI chatbot platforms, known internally as Electron Chatbot. The project integrated large language model capabilities into the GM workplace environment to improve employee efficiency, accelerate information retrieval, and modernize internal workflows through AI-driven assistance.",
             sections: [
                 {
-                    title: "Problem",
-                    text: "Employees needed a faster way to find internal information, resources, and workflow support without manually searching across multiple enterprise systems."
+                    title: "Enterprise Problem",
+                    text: "Employees needed a faster way to locate information, navigate internal resources, and complete tasks that previously consumed significant portions of the workday. By centralizing knowledge access and streamlining user interactions, the platform reduced the need for manual searching across internal systems."
                 },
                 {
                     title: "My Full-Stack Scope",
-                    text: "Contributed across frontend interaction work, backend/API integration planning, database-backed workflow thinking, AI assistant behavior, and usability support for daily employee use."
+                    text: "I worked collaboratively with a team of developers to help bring the platform from concept to production, contributing to implementation and overall functionality. The project required combining modern frontend development, backend integration, AI-driven workflows, and enterprise usability principles into a scalable internal solution employees could rely on daily."
                 },
                 {
-                    title: "UX/UI Decisions",
-                    text: "Focused on making the assistant feel approachable, useful, and easy to navigate so employees could move from question to answer with less friction."
+                    title: "Key Project Goals",
+                    bullets: [
+                        "Improve workplace efficiency through AI",
+                        "Reduce time spent searching for internal resources",
+                        "Streamline employee workflows",
+                        "Introduce conversational AI into enterprise systems",
+                        "Increase accessibility to company knowledge and tools",
+                        "Enhance day-to-day productivity across teams"
+                    ]
                 },
                 {
-                    title: "Backend, Data & AI",
-                    text: "Supported enterprise system integration thinking, AI/LLM workflow planning, knowledge retrieval patterns, and scalable data accessibility."
+                    title: "Platform Capabilities",
+                    bullets: [
+                        "Large Language Model technology",
+                        "Conversational AI workflows",
+                        "Enterprise search and retrieval functionality",
+                        "Internal knowledge assistance systems",
+                        "Scalable frontend and backend integration"
+                    ]
                 },
                 {
-                    title: "Experience Gained",
-                    text: "Strengthened experience with AI-powered product workflows, cross-system integration, enterprise usability, and full-stack collaboration."
+                    title: "Operational Outcome",
+                    text: "One of the project's most impactful outcomes was a measurable increase in operational efficiency. The chatbot significantly reduced the time employees spent locating information and completing repetitive search-related tasks, helping improve productivity across the organization."
                 },
                 {
-                    title: "Outcome",
-                    text: "Helped demonstrate the value of enterprise AI by improving how employees located information and navigated internal resources."
+                    title: "Experience Strengthened",
+                    bullets: [
+                        "AI-integrated application development",
+                        "Enterprise conversational interfaces",
+                        "Large Language Model implementation",
+                        "Full-stack collaboration",
+                        "User-focused productivity tools",
+                        "Intelligent workflow automation",
+                        "Modern enterprise software architecture",
+                        "Scalable internal platform development",
+                        "Cross-functional Agile development"
+                    ]
+                },
+                {
+                    title: "Why It Mattered",
+                    text: "The Electron Chatbot project highlighted how AI could be effectively integrated into enterprise ecosystems to create meaningful operational improvements, positioning GM at the forefront of internal AI-driven workplace innovation."
                 }
             ]
         },
@@ -520,7 +547,8 @@ function renderDeepDives() {
                 ${study.sections.map((section) => `
                     <section>
                         <h4>${section.title}</h4>
-                        <p>${section.text}</p>
+                        ${section.text ? `<p>${section.text}</p>` : ""}
+                        ${section.bullets ? `<ul>${section.bullets.map((item) => `<li>${item}</li>`).join("")}</ul>` : ""}
                     </section>
                 `).join("")}
             </div>
