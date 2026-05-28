@@ -492,6 +492,84 @@ h3 {
     color: var(--accent-strong);
 }
 
+.design-section {
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(238, 231, 255, 0.82)),
+        var(--paper);
+}
+
+.design-card {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.82fr) minmax(0, 1.18fr);
+    gap: 24px;
+    align-items: stretch;
+}
+
+.design-intro,
+.design-detail-grid section {
+    border: 1px solid rgba(124, 58, 237, 0.15);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.88);
+    box-shadow: var(--shadow);
+}
+
+.design-intro {
+    display: grid;
+    align-content: start;
+    gap: 16px;
+    padding: clamp(24px, 4vw, 40px);
+    background:
+        linear-gradient(145deg, rgba(59, 29, 104, 0.95), rgba(124, 58, 237, 0.86)),
+        var(--plum);
+    color: #ffffff;
+}
+
+.design-intro h3 {
+    margin-bottom: 0;
+    font-size: clamp(2rem, 4vw, 4rem);
+    line-height: 0.98;
+}
+
+.design-intro p {
+    color: rgba(255, 255, 255, 0.84);
+}
+
+.design-intro .outcome-block {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.18);
+}
+
+.design-intro .outcome-block h4,
+.design-intro .outcome-block p {
+    color: #ffffff;
+}
+
+.design-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.design-detail-grid section {
+    display: grid;
+    align-content: start;
+    gap: 14px;
+    padding: 22px;
+}
+
+.design-detail-grid h4 {
+    margin: 0;
+    color: var(--plum);
+}
+
+.design-detail-grid ul {
+    display: grid;
+    gap: 9px;
+    margin: 0;
+    padding-left: 18px;
+    color: var(--muted);
+}
+
 .project-card,
 .process-step,
 .experience-card {
@@ -702,7 +780,9 @@ h3 {
 
     .hero,
     .skills-layout,
-    .contact-section {
+    .contact-section,
+    .design-card,
+    .design-detail-grid {
         grid-template-columns: 1fr;
     }
 

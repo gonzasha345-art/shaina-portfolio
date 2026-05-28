@@ -116,6 +116,50 @@ const portfolio = {
             outcome: "Helped reduce firewall processing timelines from months to days through centralized workflow automation and cross-system integration planning."
         }
     ],
+    designExperience: {
+        title: "Enterprise Digital Display & Brand Experience Design",
+        summary: "Alongside software engineering and full-stack development responsibilities at General Motors, I contributed extensively to enterprise visual design, digital branding, and large-scale internal communication experiences across GM's global environment.",
+        description: "I designed professional digital displays, internal visual communications, event signage, branded presentation materials, informational displays, and dealership-related digital experiences used throughout GM facilities, corporate environments, and high-visibility communication spaces.",
+        workIncluded: [
+            "Enterprise digital signage",
+            "Internal event displays",
+            "Corporate communication graphics",
+            "Branded presentation visuals",
+            "Informational and promotional displays",
+            "Departmental and organizational announcements",
+            "Internal campaign visuals",
+            "Dealership-facing digital experiences",
+            "Large-scale visual communication assets"
+        ],
+        balance: [
+            "Brand consistency",
+            "Professional enterprise presentation standards",
+            "User attention and readability",
+            "Modern visual design principles",
+            "Strategic communication goals",
+            "High-visibility display environments"
+        ],
+        expertise: [
+            "Visual hierarchy",
+            "Information design",
+            "Brand storytelling",
+            "Corporate communication strategy",
+            "Large-format display design",
+            "User attention and engagement psychology"
+        ],
+        strengthened: [
+            "Enterprise visual design",
+            "Corporate branding systems",
+            "Digital signage design",
+            "Information and communication design",
+            "UX-focused visual storytelling",
+            "Presentation and display systems",
+            "Large-scale organizational communications",
+            "Creative direction within enterprise environments",
+            "Cross-functional collaboration between technical and creative teams"
+        ],
+        outcome: "This work translated complex organizational messaging into visually impactful experiences that quickly captured attention and communicated information effectively. Teams and stakeholders gave positive feedback on the creativity, professionalism, and visual impact of the work, especially around important initiatives, events, and organizational messaging."
+    },
     experience: [
         {
             company: "General Motors",
@@ -283,6 +327,44 @@ function renderGMProjects() {
     `).join("");
 }
 
+function renderDesignExperience() {
+    const designContainer = document.querySelector(".design-feature");
+    const design = portfolio.designExperience;
+
+    designContainer.innerHTML = `
+        <article class="design-card">
+            <div class="design-intro">
+                <p class="case-label">Enterprise UX/UI & Visual Design</p>
+                <h3>${design.title}</h3>
+                <p>${design.summary}</p>
+                <p>${design.description}</p>
+                <div class="outcome-block">
+                    <h4>Impact</h4>
+                    <p>${design.outcome}</p>
+                </div>
+            </div>
+            <div class="design-detail-grid">
+                <section>
+                    <h4>Work Included</h4>
+                    <div class="feature-list">${design.workIncluded.map((item) => `<span>${item}</span>`).join("")}</div>
+                </section>
+                <section>
+                    <h4>Design Balance</h4>
+                    <ul>${design.balance.map((item) => `<li>${item}</li>`).join("")}</ul>
+                </section>
+                <section>
+                    <h4>Design Thinking</h4>
+                    <ul>${design.expertise.map((item) => `<li>${item}</li>`).join("")}</ul>
+                </section>
+                <section>
+                    <h4>Expertise Strengthened</h4>
+                    <div class="feature-list">${design.strengthened.map((item) => `<span>${item}</span>`).join("")}</div>
+                </section>
+            </div>
+        </article>
+    `;
+}
+
 function renderProcess() {
     const processGrid = document.querySelector(".process-grid");
 
@@ -341,6 +423,7 @@ function show() {
 function initPortfolio() {
     renderFeaturedCase();
     renderGMProjects();
+    renderDesignExperience();
     renderExperience();
     renderProcess();
     renderSkills();
