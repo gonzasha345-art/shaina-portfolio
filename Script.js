@@ -5,6 +5,28 @@ const portfolio = {
         linkedin: "https://www.linkedin.com/in/shainag3",
         website: "https://www.shainagonzalesdesigns.com"
     },
+    impact: [
+        {
+            value: "6",
+            title: "Enterprise Product Areas",
+            text: "AI assistants, event platforms, gamified learning, communications, infrastructure dashboards, and workflow automation."
+        },
+        {
+            value: "3.5",
+            title: "Years at General Motors",
+            text: "Hands-on delivery inside enterprise environments with product, engineering, data, and stakeholder complexity."
+        },
+        {
+            value: "2 mo to days",
+            title: "Workflow Compression",
+            text: "Helped identify and support automation paths for request processes that historically took months."
+        },
+        {
+            value: "UX + SQL",
+            title: "Design-to-Data Range",
+            text: "Comfort moving from wireframes and UI systems into front-end implementation, APIs, SQL, and reporting."
+        }
+    ],
     featuredCase: {
         title: "Electron Chatbot",
         subtitle: "Enterprise AI Assistant Platform",
@@ -126,10 +148,9 @@ const portfolio = {
             "Corporate communication graphics",
             "Branded presentation visuals",
             "Informational and promotional displays",
-            "Departmental and organizational announcements",
+            "Departmental announcements",
             "Internal campaign visuals",
-            "Dealership-facing digital experiences",
-            "Large-scale visual communication assets"
+            "Dealership-facing digital experiences"
         ],
         balance: [
             "Brand consistency",
@@ -154,12 +175,17 @@ const portfolio = {
             "Information and communication design",
             "UX-focused visual storytelling",
             "Presentation and display systems",
-            "Large-scale organizational communications",
-            "Creative direction within enterprise environments",
-            "Cross-functional collaboration between technical and creative teams"
+            "Creative direction"
         ],
-        outcome: "This work translated complex organizational messaging into visually impactful experiences that quickly captured attention and communicated information effectively. Teams and stakeholders gave positive feedback on the creativity, professionalism, and visual impact of the work, especially around important initiatives, events, and organizational messaging."
+        outcome: "This work translated complex organizational messaging into visually impactful experiences that quickly captured attention and communicated information effectively. Teams and stakeholders gave positive feedback on the creativity, professionalism, and visual impact of the work."
     },
+    skillBars: [
+        { label: "Front-End Product UI", level: 92 },
+        { label: "UX/UI Systems", level: 94 },
+        { label: "Data + SQL", level: 84 },
+        { label: "AI Workflow Thinking", level: 80 },
+        { label: "Enterprise Collaboration", level: 90 }
+    ],
     experience: [
         {
             company: "General Motors",
@@ -183,7 +209,7 @@ const portfolio = {
         },
         {
             company: "Purdue University",
-            role: "Bachelor's Degree in Graphic Design & Computer Science",
+            role: "Graphic Design & Computer Science",
             dates: "2016 - 2022",
             highlights: [
                 "Built a foundation that combines visual design, UX thinking, software development, and technical problem solving.",
@@ -194,19 +220,27 @@ const portfolio = {
     process: [
         {
             title: "Research",
-            text: "Partner with stakeholders, study workflows, identify inefficiencies, and define business and user goals before designing the solution."
+            text: "Partner with stakeholders, study workflows, identify friction, and define business and user goals before designing the solution."
         },
         {
             title: "Design",
-            text: "Translate requirements into wireframes, user flows, responsive UI patterns, and visual systems that make complex tasks easier."
+            text: "Translate requirements into wireframes, user flows, responsive UI patterns, visual hierarchy, and interface systems."
         },
         {
             title: "Build",
             text: "Develop frontend interfaces, backend services, API integrations, database logic, dashboards, and automated workflows."
         },
         {
+            title: "Measure",
+            text: "Use data, usability feedback, and stakeholder review to refine workflows, reporting, accessibility, and product quality."
+        },
+        {
+            title: "Scale",
+            text: "Shape patterns that teams can reuse across enterprise platforms, internal tools, and communication systems."
+        },
+        {
             title: "Improve",
-            text: "Test usability, improve performance and accessibility, refine reporting, and iterate with engineering, product, and business teams."
+            text: "Keep iterating after launch so the product gets clearer, faster, and more valuable for daily users."
         }
     ],
     skills: [
@@ -244,16 +278,38 @@ const portfolio = {
     ]
 };
 
+function renderImpact() {
+    const impactGrid = document.querySelector(".impact-grid");
+
+    if (!impactGrid) {
+        return;
+    }
+
+    impactGrid.innerHTML = portfolio.impact.map((item) => `
+        <article class="impact-card reveal">
+            <strong>${item.value}</strong>
+            <h3>${item.title}</h3>
+            <p>${item.text}</p>
+        </article>
+    `).join("");
+}
+
 function renderFeaturedCase() {
     const caseContainer = document.querySelector(".featured-case");
     const project = portfolio.featuredCase;
 
+    if (!caseContainer) {
+        return;
+    }
+
     caseContainer.innerHTML = `
-        <article class="case-feature">
+        <article class="case-feature reveal">
             <div class="case-hero">
-                <p class="case-label">Featured Case Study</p>
-                <h3>${project.title}</h3>
-                <p class="case-subtitle">${project.subtitle}</p>
+                <div>
+                    <p class="case-label">Featured Case Study</p>
+                    <h3>${project.title}</h3>
+                    <p class="case-subtitle">${project.subtitle}</p>
+                </div>
                 <dl class="case-facts">
                     <div>
                         <dt>Role</dt>
@@ -297,11 +353,17 @@ function renderFeaturedCase() {
 function renderGMProjects() {
     const caseGrid = document.querySelector(".case-study-grid");
 
+    if (!caseGrid) {
+        return;
+    }
+
     caseGrid.innerHTML = portfolio.gmProjects.map((project) => `
-        <article class="case-card">
+        <article class="case-card reveal">
             <div class="case-card-heading">
-                <p>General Motors</p>
-                <h3>${project.title}</h3>
+                <div>
+                    <p>General Motors</p>
+                    <h3>${project.title}</h3>
+                </div>
                 <strong>${project.role}</strong>
             </div>
             <div class="project-meta">
@@ -312,12 +374,8 @@ function renderGMProjects() {
                 <p>${project.challenge}</p>
             </div>
             <div class="case-card-section">
-                <h4>Contributions</h4>
+                <h4>Contribution</h4>
                 <ul>${project.contributions.map((item) => `<li>${item}</li>`).join("")}</ul>
-            </div>
-            <div class="case-card-section">
-                <h4>Key Features</h4>
-                <div class="feature-list">${project.features.map((item) => `<span>${item}</span>`).join("")}</div>
             </div>
             <div class="outcome-block">
                 <h4>Outcome</h4>
@@ -331,8 +389,12 @@ function renderDesignExperience() {
     const designContainer = document.querySelector(".design-feature");
     const design = portfolio.designExperience;
 
+    if (!designContainer) {
+        return;
+    }
+
     designContainer.innerHTML = `
-        <article class="design-card">
+        <article class="design-card reveal">
             <div class="design-intro">
                 <p class="case-label">Enterprise UX/UI & Visual Design</p>
                 <h3>${design.title}</h3>
@@ -365,23 +427,35 @@ function renderDesignExperience() {
     `;
 }
 
-function renderProcess() {
-    const processGrid = document.querySelector(".process-grid");
+function renderSkillBars() {
+    const skillBars = document.querySelector(".skill-bars");
 
-    processGrid.innerHTML = portfolio.process.map((step, index) => `
-        <article class="process-step">
-            <span>${index + 1}</span>
-            <h3>${step.title}</h3>
-            <p>${step.text}</p>
-        </article>
+    if (!skillBars) {
+        return;
+    }
+
+    skillBars.innerHTML = portfolio.skillBars.map((skill) => `
+        <div class="skill-bar">
+            <div class="skill-bar-label">
+                <span>${skill.label}</span>
+                <strong>${skill.level}%</strong>
+            </div>
+            <div class="skill-track">
+                <span class="skill-fill level-${skill.level}"></span>
+            </div>
+        </div>
     `).join("");
 }
 
 function renderExperience() {
     const experienceGrid = document.querySelector(".experience-grid");
 
+    if (!experienceGrid) {
+        return;
+    }
+
     experienceGrid.innerHTML = portfolio.experience.map((item) => `
-        <article class="experience-card">
+        <article class="experience-card reveal">
             <div class="experience-heading">
                 <p>${item.dates}</p>
                 <h3>${item.company}</h3>
@@ -394,17 +468,42 @@ function renderExperience() {
     `).join("");
 }
 
+function renderProcess() {
+    const processGrid = document.querySelector(".process-grid");
+
+    if (!processGrid) {
+        return;
+    }
+
+    processGrid.innerHTML = portfolio.process.map((step, index) => `
+        <article class="process-step reveal">
+            <span>${index + 1}</span>
+            <h3>${step.title}</h3>
+            <p>${step.text}</p>
+        </article>
+    `).join("");
+}
+
 function renderSkills() {
     const skillCloud = document.querySelector(".skill-cloud");
     const priorityList = document.querySelector(".priority-list");
 
-    skillCloud.innerHTML = portfolio.skills.map((skill) => `<span class="skill-pill">${skill}</span>`).join("");
-    priorityList.innerHTML = portfolio.priorities.map((priority) => `<li>${priority}</li>`).join("");
+    if (skillCloud) {
+        skillCloud.innerHTML = portfolio.skills.map((skill) => `<span class="skill-pill">${skill}</span>`).join("");
+    }
+
+    if (priorityList) {
+        priorityList.innerHTML = portfolio.priorities.map((priority) => `<li>${priority}</li>`).join("");
+    }
 }
 
 function setupContactActions() {
     const copyButton = document.querySelector(".copy-email");
     const status = document.querySelector(".copy-status");
+
+    if (!copyButton || !status) {
+        return;
+    }
 
     copyButton.addEventListener("click", async () => {
         try {
@@ -416,18 +515,66 @@ function setupContactActions() {
     });
 }
 
+function animateCounters() {
+    const counters = document.querySelectorAll("[data-count]");
+
+    counters.forEach((counter) => {
+        const target = Number(counter.dataset.count);
+        const isDecimal = !Number.isInteger(target);
+        const duration = 1200;
+        const start = performance.now();
+
+        function tick(now) {
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const value = target * eased;
+            counter.textContent = isDecimal ? value.toFixed(1) : Math.round(value).toString();
+
+            if (progress < 1) {
+                requestAnimationFrame(tick);
+            }
+        }
+
+        requestAnimationFrame(tick);
+    });
+}
+
+function setupRevealAnimations() {
+    const revealItems = document.querySelectorAll(".reveal");
+
+    if (!("IntersectionObserver" in window)) {
+        revealItems.forEach((item) => item.classList.add("is-visible"));
+        return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.16 });
+
+    revealItems.forEach((item) => observer.observe(item));
+}
+
 function show() {
     // Called by the Safari extension host after page load. The portfolio page does not need extension state.
 }
 
 function initPortfolio() {
+    renderImpact();
+    renderDesignExperience();
     renderFeaturedCase();
     renderGMProjects();
-    renderDesignExperience();
+    renderSkillBars();
+    renderSkills();
     renderExperience();
     renderProcess();
-    renderSkills();
     setupContactActions();
+    setupRevealAnimations();
+    animateCounters();
 }
 
 document.addEventListener("DOMContentLoaded", initPortfolio);

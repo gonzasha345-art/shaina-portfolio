@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Portfolio for Shaina Gonzales, a software engineer specializing in full-stack, UX/UI, data, and AI-driven applications.">
     <title>Shaina Gonzales | Software Engineer & UX/UI Portfolio</title>
-    <link rel="stylesheet" href="Style.css?v=20260528">
-    <script src="Script.js?v=20260528" defer></script>
+    <link rel="stylesheet" href="Style.css?v=20260528-portfolio-redesign">
+    <script src="Script.js?v=20260528-portfolio-redesign" defer></script>
 </head>
 <body>
     <div id="portfolio-app" data-component="portfolio-shell">
@@ -29,56 +29,87 @@
 
         <main>
             <section class="hero" id="home">
-                <div class="hero-copy">
-                    <p class="eyebrow">Software Engineer | Full-Stack, UX/UI, Data & AI</p>
-                    <h1>Building secure, user-focused applications from interface design to data systems.</h1>
-                    <p class="hero-text">I am a software engineer with 3.5 years at General Motors building enterprise AI assistants, gamified learning systems, event platforms, internal communication tools, infrastructure dashboards, and workflow automation products.</p>
+                <div class="hero-copy reveal">
+                    <h1>Enterprise software engineer designing products people actually want to use.</h1>
+                    <p class="hero-text">I build full-stack applications, AI-assisted workflows, dashboards, and UX/UI systems that turn complex enterprise processes into clear, polished product experiences.</p>
                     <div class="hero-actions" aria-label="Primary actions">
-                        <a class="button button-primary" href="#work">View GM Projects</a>
-                        <a class="button button-secondary" href="tel:2604139966">Call (260) 413-9966</a>
+                        <a class="button button-primary" href="#work">See Project Proof</a>
+                        <a class="button button-secondary" href="mailto:shaina.gonzales@outlook.com">Email Shaina</a>
                     </div>
-                </div>
-                <aside class="hero-panel" aria-label="Portfolio snapshot">
-                    <div class="profile-card">
-                        <div class="avatar" aria-hidden="true">SG</div>
+                    <dl class="hero-proof" aria-label="Portfolio proof points">
                         <div>
-                            <p class="profile-name">Shaina Gonzales</p>
-                            <p class="profile-role">Full-Stack UX/UI Engineer</p>
-                        </div>
-                    </div>
-                    <dl class="metrics">
-                        <div>
-                            <dt>Focus</dt>
-                            <dd>Enterprise Apps</dd>
+                            <dt data-count="6">0</dt>
+                            <dd>GM product areas</dd>
                         </div>
                         <div>
-                            <dt>Strength</dt>
-                            <dd>UX + Data</dd>
+                            <dt data-count="3.5">0</dt>
+                            <dd>years enterprise delivery</dd>
                         </div>
                         <div>
-                            <dt>Experience</dt>
-                            <dd>3.5 Years</dd>
+                            <dt data-count="100">0</dt>
+                            <dd>UX-to-data mindset</dd>
                         </div>
                     </dl>
+                </div>
+
+                <aside class="hero-dashboard reveal" aria-label="Animated portfolio dashboard">
+                    <div class="dashboard-topline">
+                        <div>
+                            <p>Hiring Signal</p>
+                            <strong>Software + UX + Data</strong>
+                        </div>
+                        <span class="live-dot">Available</span>
+                    </div>
+                    <div class="dashboard-grid">
+                        <div class="metric-tile">
+                            <span>AI workflows</span>
+                            <strong data-count="4">0</strong>
+                            <div class="sparkline" aria-hidden="true">
+                                <i></i><i></i><i></i><i></i><i></i>
+                            </div>
+                        </div>
+                        <div class="metric-tile">
+                            <span>Product stack</span>
+                            <strong>React / SQL / UX</strong>
+                            <div class="mini-bars" aria-hidden="true">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+                        </div>
+                        <div class="chart-panel">
+                            <div class="chart-heading">
+                                <span>Enterprise impact</span>
+                                <strong>Workflow clarity</strong>
+                            </div>
+                            <svg class="line-chart" viewBox="0 0 360 170" role="img" aria-label="Animated line chart showing rising product impact">
+                                <path class="chart-grid-line" d="M20 35 H340"></path>
+                                <path class="chart-grid-line" d="M20 85 H340"></path>
+                                <path class="chart-grid-line" d="M20 135 H340"></path>
+                                <path class="chart-line" d="M24 128 C78 108 92 77 136 86 C190 96 194 45 238 54 C282 62 294 28 336 24"></path>
+                                <circle cx="336" cy="24" r="6"></circle>
+                            </svg>
+                        </div>
+                    </div>
                 </aside>
             </section>
 
-            <section class="section work-section" id="work">
-                <div class="section-heading">
-                    <p class="eyebrow">General Motors Project Highlights</p>
-                    <h2>Enterprise products where I combined UX strategy, front-end development, full-stack thinking, data systems, and AI-driven workflows.</h2>
+            <section class="section impact-section" aria-label="Impact snapshot">
+                <div class="section-heading reveal">
+                    <h2>What employers should see first: shipped product judgment, not just tools.</h2>
+                    <p>My work sits at the intersection of design clarity, engineering execution, and measurable workflow improvement.</p>
                 </div>
-                <div class="featured-case"></div>
-                <div class="case-study-grid" aria-label="Additional General Motors case studies"></div>
+                <div class="impact-grid"></div>
             </section>
 
             <section class="section design-section" id="design">
-                <div class="section-heading">
+                <div class="section-heading reveal">
                     <p class="eyebrow">UX/UI Design</p>
-                    <h2>Enterprise digital display, brand experience, and large-scale communication design.</h2>
+                    <h2>Design leadership that makes technical systems easier to understand, navigate, and trust.</h2>
                 </div>
                 <div class="design-feature">
-                    <article class="design-card">
+                    <article class="design-card reveal">
                         <div class="design-intro">
                             <p class="case-label">Enterprise UX/UI & Visual Design</p>
                             <h3>Enterprise Digital Display & Brand Experience Design</h3>
@@ -105,7 +136,7 @@
                                 <h4>Design Balance</h4>
                                 <ul>
                                     <li>Brand consistency</li>
-                                    <li>Professional enterprise presentation standards</li>
+                                    <li>Professional enterprise standards</li>
                                     <li>User attention and readability</li>
                                     <li>Modern visual design principles</li>
                                 </ul>
@@ -116,7 +147,7 @@
                                     <li>Visual hierarchy</li>
                                     <li>Information design</li>
                                     <li>Brand storytelling</li>
-                                    <li>Corporate communication strategy</li>
+                                    <li>Communication strategy</li>
                                 </ul>
                             </section>
                             <section>
@@ -134,43 +165,56 @@
                 </div>
             </section>
 
+            <section class="section work-section" id="work">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">General Motors Project Highlights</p>
+                    <h2>Enterprise products where I combined UX strategy, front-end development, data systems, and AI-driven workflows.</h2>
+                </div>
+                <div class="featured-case"></div>
+                <div class="case-study-grid" aria-label="Additional General Motors case studies"></div>
+            </section>
+
+            <section class="section skills-section" id="skills">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Capability Map</p>
+                    <h2>A product-minded engineering stack with design judgment built in.</h2>
+                </div>
+                <div class="skills-dashboard">
+                    <div class="skill-chart-panel reveal">
+                        <h3>Strength Distribution</h3>
+                        <div class="skill-bars"></div>
+                    </div>
+                    <div class="tools-panel reveal">
+                        <h3>Design Priorities</h3>
+                        <ul class="priority-list"></ul>
+                    </div>
+                    <div class="skill-cloud reveal" aria-label="Design skills"></div>
+                </div>
+            </section>
+
             <section class="section experience-section" id="experience">
-                <div class="section-heading">
+                <div class="section-heading reveal">
                     <p class="eyebrow">Experience</p>
-                    <h2>Professional work grounded in enterprise delivery, product thinking, and polished user experiences.</h2>
+                    <h2>Professional history grounded in enterprise delivery, product thinking, and polished user experiences.</h2>
                 </div>
                 <div class="experience-grid"></div>
             </section>
 
             <section class="section process-section" id="process">
-                <div class="section-heading">
-                    <p class="eyebrow">Design Process</p>
-                    <h2>A full product lifecycle approach from user need to shipped software.</h2>
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Process</p>
+                    <h2>How I move from ambiguous business need to usable shipped product.</h2>
                 </div>
                 <div class="process-grid"></div>
             </section>
 
-            <section class="section skills-section" id="skills">
-                <div class="section-heading">
-                    <p class="eyebrow">Capabilities</p>
-                    <h2>Technical and design strengths employers can map directly to product work.</h2>
-                </div>
-                <div class="skills-layout">
-                    <div class="skill-cloud" aria-label="Design skills"></div>
-                    <div class="tools-panel">
-                        <h3>Design Priorities</h3>
-                        <ul class="priority-list"></ul>
-                    </div>
-                </div>
-            </section>
-
             <section class="section contact-section" id="contact">
-                <div class="contact-copy">
+                <div class="contact-copy reveal">
                     <p class="eyebrow">Contact</p>
-                    <h2>Let’s talk about software engineering, UX/UI, data, and AI-driven product roles.</h2>
-                    <p>Employers can reach me directly by phone or email. My resume also lists LinkedIn and portfolio links for more background.</p>
+                    <h2>Looking for a software engineer who can also think like a product designer?</h2>
+                    <p>Employers can reach me directly by email, phone, or LinkedIn. I am ready for roles where engineering, UX/UI, data, and AI-driven product thinking matter.</p>
                 </div>
-                <div class="contact-card">
+                <div class="contact-card reveal">
                     <a href="mailto:shaina.gonzales@outlook.com">shaina.gonzales@outlook.com</a>
                     <a href="tel:2604139966">(260) 413-9966</a>
                     <a href="https://www.linkedin.com/in/shainag3">LinkedIn</a>
