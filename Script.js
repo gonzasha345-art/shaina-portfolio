@@ -75,15 +75,16 @@ const portfolio = {
         {
             title: "Broadcasting Services Event Management Platform",
             role: "UX/UI Designer & Full-Stack Developer",
-            technologies: ["React", "JavaScript", "SQL", "Azure", "Terraform", "GitHub"],
-            challenge: "Broadcasting services teams needed a centralized platform for enterprise live events, executive broadcasts, production scheduling, approvals, and administrative oversight.",
+            technologies: ["React", "JavaScript", "SQL", "Azure", "Terraform", "GitHub", "Enterprise Cloud Workflows"],
+            challenge: "GM needed to redesign and redevelop an enterprise broadcasting and event management platform used to coordinate live corporate events, Mary Barra executive-level broadcasts, large-scale internal events, and organization-wide live productions.",
             contributions: [
-                "Designed the full UX/UI experience, including wireframes, interactive prototypes, and high-fidelity UI systems.",
-                "Designed complex calendar workflows, multi-view scheduling systems, and role-based experiences.",
-                "Contributed heavily to frontend implementation while collaborating with backend, API, infrastructure, and database teams."
+                "Served as a lead contributor across UX/UI and frontend development, designing the platform experience from the ground up.",
+                "Created wireframes, user flows, interactive prototypes, high-fidelity UI systems, and multi-view calendar workflows.",
+                "Contributed heavily to frontend implementation while collaborating with backend and infrastructure teams on data flow, workflow logic, and scalability.",
+                "Supported backend and database-related efforts around application logic, event data structures, and platform integration requirements."
             ],
             features: ["Multi-view calendar", "Event requests and approvals", "Admin dashboards", "Role-based visibility", "Live event coordination"],
-            outcome: "Modernized enterprise event coordination and created a more scalable scheduling process for administrators and standard users."
+            outcome: "Modernized how enterprise broadcasting events were coordinated across GM, creating a more streamlined and user-friendly experience for employees submitting events and administrators managing high-visibility corporate productions."
         },
         {
             title: "GM Announce",
@@ -204,31 +205,83 @@ const portfolio = {
             title: "Broadcasting Services Event Management Platform",
             subtitle: "Enterprise Live Event & Scheduling System",
             role: "UX/UI Designer & Full-Stack Developer",
-            summary: "A deeper case study for showing complex product workflows, role-based UX, frontend execution, and backend/database collaboration.",
+            summary: "At General Motors, I contributed to the redesign and redevelopment of an enterprise broadcasting and event management platform used to coordinate and manage live corporate events across the organization. The project supported Mary Barra executive-level broadcasts, large-scale internal events, and organization-wide live productions, requiring a scalable user experience capable of handling complex scheduling and administrative workflows.",
             sections: [
                 {
-                    title: "Problem",
-                    text: "Broadcasting services teams needed a centralized system for live events, executive broadcasts, production scheduling, approvals, and administration."
+                    title: "Enterprise Problem",
+                    text: "Broadcasting services teams needed a centralized platform for enterprise live events, executive broadcasts, production scheduling, approvals, and administrative oversight. The system had to support high-visibility productions while remaining intuitive for employees and administrators with different permissions and workflows."
                 },
                 {
-                    title: "My Full-Stack Scope",
-                    text: "Designed the UX/UI, contributed to frontend implementation, and collaborated with backend, API, infrastructure, and database teams."
+                    title: "My UX/UI & Frontend Role",
+                    text: "I served as a lead contributor on both the UX/UI and frontend development sides of the project. I designed the platform experience from the ground up, including wireframes, user flows, interactive prototypes, and high-fidelity UI systems."
                 },
                 {
-                    title: "UX/UI Decisions",
-                    text: "Created workflows for multi-view calendars, event requests, approvals, role-based visibility, and administrative oversight."
+                    title: "Calendar System Challenge",
+                    text: "One of the most technically and creatively challenging aspects was the custom calendar and event management system. I designed and helped implement a multi-view calendar experience capable of organizing enterprise-wide live events across teams, administrators, departments, and complex scheduling scenarios."
                 },
                 {
-                    title: "Backend & Data Collaboration",
-                    text: "Worked around SQL-backed workflows, event data, admin visibility, and scalable scheduling logic with technical teams."
+                    title: "Key Platform Functionality",
+                    bullets: [
+                        "Enterprise event scheduling and management",
+                        "Multi-view calendar systems",
+                        "Administrative approval workflows",
+                        "Event request submission forms",
+                        "Role-based user experiences",
+                        "Live event coordination dashboards",
+                        "User and admin-side platform separation",
+                        "Real-time event visibility and organization"
+                    ]
                 },
                 {
-                    title: "Experience Gained",
-                    text: "Gained deeper experience turning complex operational requirements into usable full-stack product flows."
+                    title: "Calendar UX Planning",
+                    bullets: [
+                        "Different user permission levels",
+                        "Event ownership visibility",
+                        "Calendar filtering and navigation",
+                        "Administrative scheduling workflows",
+                        "Multi-scenario event handling",
+                        "Responsive interaction patterns",
+                        "Scalable information architecture"
+                    ]
+                },
+                {
+                    title: "Two Product Environments",
+                    text: "The platform operated with a client/user-facing experience where users could submit and manage their own event requests, plus a comprehensive administrative system where broadcasting teams could oversee, approve, deny, edit, and organize enterprise events across the company."
+                },
+                {
+                    title: "Full-Stack Collaboration",
+                    text: "After the design phase, I contributed heavily to frontend implementation, translating designs into production-ready features. I collaborated closely with backend and infrastructure teams to support data flow, workflow logic, system scalability, event data structures, application logic, and platform integration requirements."
+                },
+                {
+                    title: "Technologies & Tools",
+                    bullets: [
+                        "React",
+                        "JavaScript",
+                        "SQL",
+                        "Azure",
+                        "Terraform",
+                        "GitHub",
+                        "Enterprise cloud infrastructure workflows"
+                    ]
+                },
+                {
+                    title: "Experience Strengthened",
+                    bullets: [
+                        "Enterprise UX architecture",
+                        "Complex calendar and scheduling systems",
+                        "Role-based application design",
+                        "Frontend engineering",
+                        "Full-stack collaboration",
+                        "Workflow automation interfaces",
+                        "Administrative dashboard design",
+                        "Cloud-integrated enterprise applications",
+                        "Agile software development",
+                        "Scalable application planning"
+                    ]
                 },
                 {
                     title: "Outcome",
-                    text: "Helped modernize enterprise event coordination and created a more scalable scheduling process for administrators and standard users."
+                    text: "The final platform modernized how enterprise broadcasting events were coordinated across the organization, creating a significantly more streamlined and user-friendly experience for employees and administrators managing high-visibility corporate productions."
                 }
             ]
         },
