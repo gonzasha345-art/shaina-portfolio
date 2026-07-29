@@ -327,6 +327,17 @@ const portfolio = {
             subtitle: "Firewall Workflow Automation System",
             role: "API Integration & UX/UI Contributor",
             summary: "At General Motors, I contributed to the TAD initiative to centralize and automate firewall request workflows, connect enterprise systems, and reduce operational turnaround times from months to days.",
+            architecture: {
+                title: "System at a Glance",
+                description: "A conceptual view of the integration pattern I supported. Production implementation details are intentionally omitted.",
+                sources: [
+                    { name: "Slack API", type: "Collaboration" },
+                    { name: "Confluence API", type: "Knowledge" },
+                    { name: "AI / Gleam", type: "Intelligence" }
+                ],
+                hub: { name: "TAD", type: "Orchestration" },
+                output: { name: "Firewall Workflow", type: "Automated outcome" }
+            },
             sections: [
                 {
                     title: "Company & Technologies",
@@ -423,13 +434,6 @@ const portfolio = {
         ],
         outcome: "This work translated complex organizational messaging into visually impactful experiences that quickly captured attention and communicated information effectively. Teams and stakeholders gave positive feedback on the creativity, professionalism, and visual impact of the work."
     },
-    skillBars: [
-        { label: "Full-Stack Product Engineering", level: 92 },
-        { label: "UX/UI Systems", level: 94 },
-        { label: "Data + SQL", level: 84 },
-        { label: "AI Workflow Thinking", level: 80 },
-        { label: "Enterprise Collaboration", level: 90 }
-    ],
     experience: [
         {
             company: "General Motors",
@@ -439,6 +443,17 @@ const portfolio = {
                 "Owned projects end-to-end, translating business and user needs into wireframes, intuitive interfaces, scalable application solutions, and database-backed workflows.",
                 "Built responsive frontend interfaces, supported backend services, integrated third-party APIs, wrote complex SQL queries, and created Power BI reporting dashboards.",
                 "Integrated AI-driven functionality for chat-based assistance, workflow automation, intelligent insights, and recommendation experiences."
+            ]
+        },
+        {
+            company: "Trinetica",
+            role: "UX/UI Design Intern → UX/UI Designer & Software Contributor",
+            dates: "January 2020 - January 2023",
+            progression: "Converted to employee · January 2021",
+            highlights: [
+                "Designed modern, user-centered interfaces for enterprise web and SaaS applications, progressing from wireframes and user flows to interactive prototypes and high-fidelity Figma designs.",
+                "Partnered with product managers, developers, and business stakeholders in Agile teams to translate complex requirements into accessible, production-ready web and mobile experiences.",
+                "Maintained design systems and reusable UI components, conducted usability testing, incorporated user feedback, and expanded into software-focused collaboration toward the end of the role."
             ]
         },
         {
@@ -529,7 +544,65 @@ function caseStudyLink(title) {
         return "";
     }
 
-    return `<a class="text-link" href="#${match.id}">Read deeper case study</a>`;
+    return `<a class="text-link" href="#${match.id}">View Case Study <span aria-hidden="true">&rarr;</span></a>`;
+}
+
+function projectVisual(type) {
+    if (type === "gamification") {
+        return `
+            <a class="launch-visual launch-visual-image" href="https://grain-fluid-14768550.figma.site" target="_blank" rel="noopener noreferrer" aria-label="Open the representative gamification prototype">
+                <img src="gamification-dashboard-concept.png" alt="Representative gamification dashboard concept showing progress, quests, achievements, and activity" width="1800" height="896" loading="lazy">
+                <span class="concept-label">Independent portfolio concept</span>
+            </a>
+        `;
+    }
+
+    if (type === "electron") {
+        return `
+            <div class="launch-visual launch-visual-product visual-electron" aria-label="Representative enterprise AI assistant interface">
+                <span class="concept-label">Representative workflow</span>
+                <div class="mock-window-bar"><i></i><i></i><i></i><span>Enterprise Assistant</span></div>
+                <div class="mock-chat">
+                    <div class="mock-prompt">Find the policy and summarize next steps.</div>
+                    <div class="mock-response"><strong>Electron</strong><span>Here is the relevant guidance and a clear path forward.</span></div>
+                    <div class="mock-sources"><span>Knowledge</span><span>Resources</span><span>Actions</span></div>
+                </div>
+            </div>
+        `;
+    }
+
+    if (type === "ise") {
+        return `
+            <a class="launch-visual launch-visual-image" href="https://symbol-desert-66256692.figma.site" target="_blank" rel="noopener noreferrer" aria-label="Open the representative ISE infrastructure dashboard prototype">
+                <img src="ise-dashboard-concept.png" alt="Representative ISE infrastructure dashboard showing active nodes, uptime, IP addresses, cluster health, a global topology map, and network analytics" width="1459" height="768" loading="lazy">
+                <span class="concept-label">Independent portfolio concept</span>
+            </a>
+        `;
+    }
+
+    if (type === "broadcasting") {
+        return `
+            <div class="launch-visual launch-visual-product visual-broadcast" aria-label="Representative enterprise event scheduling interface">
+                <span class="concept-label">Representative workflow</span>
+                <div class="mock-window-bar"><i></i><i></i><i></i><span>Broadcast Operations</span></div>
+                <div class="mock-calendar">
+                    <div class="calendar-toolbar"><strong>Production Calendar</strong><span>Month</span></div>
+                    <div class="calendar-grid" aria-hidden="true">
+                        <i></i><i></i><i class="calendar-event event-one"></i><i></i><i></i><i class="calendar-event event-two"></i><i></i><i></i><i></i><i></i><i class="calendar-event event-three"></i><i></i><i></i><i></i><i></i>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    return `
+        <div class="launch-visual launch-visual-product visual-tad" aria-label="Conceptual TAD integration architecture">
+            <span class="concept-label">Conceptual system view</span>
+            <div class="mini-system-sources"><span>Slack API</span><span>Confluence API</span><span>AI / Gleam</span></div>
+            <div class="mini-system-hub"><strong>TAD</strong><small>Orchestration</small></div>
+            <div class="mini-system-output"><strong>Firewall Workflow</strong><small>Automated outcome</small></div>
+        </div>
+    `;
 }
 
 function renderImpact() {
@@ -550,59 +623,75 @@ function renderImpact() {
 
 function renderFeaturedCase() {
     const caseContainer = document.querySelector(".featured-case");
-    const project = portfolio.featuredCase;
 
     if (!caseContainer) {
         return;
     }
 
-    caseContainer.innerHTML = `
-        <article class="case-feature reveal">
-            <div class="case-hero">
+    const gmProject = (title) => portfolio.gmProjects.find((project) => project.title === title);
+    const projects = [
+        {
+            ...gmProject("Enterprise Gamification & Learning Platform"),
+            type: "gamification",
+            category: "Engagement & Learning",
+            description: "An enterprise engagement platform designed to increase participation through learning, leaderboards, events, and progress-based experiences.",
+            launchOutcome: "Modernized employee learning and participation.",
+            action: '<a class="text-link" href="https://grain-fluid-14768550.figma.site" target="_blank" rel="noopener noreferrer">Open Interactive Prototype <span aria-hidden="true">&nearr;</span></a>'
+        },
+        {
+            ...portfolio.featuredCase,
+            type: "electron",
+            category: "Enterprise AI",
+            description: "An AI assistant that made internal knowledge and workflow support faster to find through a conversational enterprise experience.",
+            launchOutcome: "Reduced time spent searching for internal information.",
+            action: caseStudyLink("Electron Chatbot")
+        },
+        {
+            ...gmProject("Broadcasting Services Event Management Platform"),
+            type: "broadcasting",
+            category: "Event Operations",
+            description: "A scheduling and administration platform for coordinating executive broadcasts and large-scale internal productions.",
+            launchOutcome: "Streamlined scheduling for high-visibility productions.",
+            action: caseStudyLink("Broadcasting Services Event Management Platform")
+        },
+        {
+            ...gmProject("ISE Platform"),
+            type: "ise",
+            category: "Infrastructure Analytics",
+            description: "A global infrastructure dashboard designed to make node health, IP systems, clusters, topology, and network activity easier to monitor.",
+            launchOutcome: "Improved visibility across complex infrastructure environments.",
+            action: '<div class="launch-actions"><a class="text-link" href="https://symbol-desert-66256692.figma.site" target="_blank" rel="noopener noreferrer">Open Interactive Prototype <span aria-hidden="true">&nearr;</span></a>' + caseStudyLink("ISE Platform") + '</div>'
+        },
+        {
+            ...gmProject("TAD Platform"),
+            type: "tad",
+            category: "Workflow Automation",
+            description: "A connected enterprise workflow designed to centralize firewall requests and reduce operational turnaround from months to days.",
+            launchOutcome: "Helped reduce request turnaround from months to days.",
+            action: caseStudyLink("TAD Platform")
+        }
+    ];
+
+    caseContainer.innerHTML = projects.map((project, index) => `
+        <article class="launch-card reveal ${index % 2 ? "launch-card-reverse" : ""}">
+            ${projectVisual(project.type)}
+            <div class="launch-copy">
                 <div>
-                    <p class="case-label">Featured Case Study</p>
+                    <p class="case-label">${project.category}</p>
                     <h3>${project.title}</h3>
-                    <p class="case-subtitle">${project.subtitle}</p>
+                    <p class="launch-description">${project.description}</p>
                 </div>
-                <dl class="case-facts">
-                    <div>
-                        <dt>Role</dt>
-                        <dd>${project.role}</dd>
-                    </div>
-                    <div>
-                        <dt>Company</dt>
-                        <dd>${project.company}</dd>
-                    </div>
+                <dl class="launch-facts">
+                    <div><dt>My Role</dt><dd>${project.role}</dd></div>
+                    <div><dt>Outcome</dt><dd>${project.launchOutcome}</dd></div>
                 </dl>
                 <div class="project-meta">
-                    ${project.technologies.map((item) => `<span>${item}</span>`).join("")}
+                    ${project.technologies.slice(0, 5).map((item) => `<span>${item}</span>`).join("")}
                 </div>
-            </div>
-            <div class="case-detail">
-                <section>
-                    <h4>The Challenge</h4>
-                    <p>${project.challenge}</p>
-                </section>
-                <section>
-                    <h4>My Contributions</h4>
-                    <ul>${project.contributions.map((item) => `<li>${item}</li>`).join("")}</ul>
-                </section>
-                <section>
-                    <h4>Key Features</h4>
-                    <div class="feature-list">${project.features.map((item) => `<span>${item}</span>`).join("")}</div>
-                </section>
-                <section>
-                    <h4>Technical & Design Focus</h4>
-                    <div class="feature-list">${project.focus.map((item) => `<span>${item}</span>`).join("")}</div>
-                </section>
-                <section class="outcome-block">
-                    <h4>The Outcome</h4>
-                    <p>${project.outcome}</p>
-                </section>
-                ${caseStudyLink(project.title)}
+                ${project.action}
             </div>
         </article>
-    `;
+    `).join("");
 }
 
 function renderGMProjects() {
@@ -612,29 +701,21 @@ function renderGMProjects() {
         return;
     }
 
-    caseGrid.innerHTML = portfolio.gmProjects.map((project) => `
-        <article class="case-card reveal">
-            <div class="case-card-heading">
-                <div>
-                    <p>General Motors</p>
-                    <h3>${project.title}</h3>
-                </div>
-                <strong>${project.role}</strong>
-            </div>
+    const featuredTitles = new Set([
+        "Enterprise Gamification & Learning Platform",
+        "Broadcasting Services Event Management Platform",
+        "ISE Platform",
+        "TAD Platform"
+    ]);
+
+    caseGrid.innerHTML = portfolio.gmProjects.filter((project) => !featuredTitles.has(project.title)).map((project) => `
+        <article class="additional-project-card">
+            <p class="case-label">General Motors</p>
+            <h3>${project.title}</h3>
+            <strong>${project.role}</strong>
+            <p>${project.outcome}</p>
             <div class="project-meta">
-                ${project.technologies.map((item) => `<span>${item}</span>`).join("")}
-            </div>
-            <div class="case-card-section">
-                <h4>Challenge</h4>
-                <p>${project.challenge}</p>
-            </div>
-            <div class="case-card-section">
-                <h4>Contribution</h4>
-                <ul>${project.contributions.map((item) => `<li>${item}</li>`).join("")}</ul>
-            </div>
-            <div class="outcome-block">
-                <h4>Outcome</h4>
-                <p>${project.outcome}</p>
+                ${project.technologies.slice(0, 3).map((item) => `<span>${item}</span>`).join("")}
             </div>
             ${caseStudyLink(project.title)}
         </article>
@@ -659,6 +740,44 @@ function renderDeepDives() {
                 <span>${study.role}</span>
             </div>
             <p class="deep-dive-summary">${study.summary}</p>
+            ${study.architecture ? `
+                <figure class="architecture-panel" aria-labelledby="${study.id}-architecture-title">
+                    <figcaption>
+                        <p class="case-label">Integration Architecture</p>
+                        <h4 id="${study.id}-architecture-title">${study.architecture.title}</h4>
+                        <p>${study.architecture.description}</p>
+                    </figcaption>
+                    <div class="architecture-diagram">
+                        <svg class="architecture-connectors" viewBox="0 0 900 360" aria-hidden="true" preserveAspectRatio="none">
+                            <defs>
+                                <marker id="architecture-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+                                    <path d="M0,0 L8,4 L0,8 Z"></path>
+                                </marker>
+                            </defs>
+                            <path d="M210 62 C310 62 320 180 410 180"></path>
+                            <path d="M210 180 L410 180"></path>
+                            <path d="M210 298 C310 298 320 180 410 180"></path>
+                            <path d="M570 180 L700 180" marker-end="url(#architecture-arrow)"></path>
+                        </svg>
+                        <div class="architecture-sources" aria-label="Connected source systems">
+                            ${study.architecture.sources.map((node) => `
+                                <div class="architecture-node architecture-source">
+                                    <strong>${node.name}</strong>
+                                    <span>${node.type}</span>
+                                </div>
+                            `).join("")}
+                        </div>
+                        <div class="architecture-node architecture-hub">
+                            <strong>${study.architecture.hub.name}</strong>
+                            <span>${study.architecture.hub.type}</span>
+                        </div>
+                        <div class="architecture-node architecture-output">
+                            <strong>${study.architecture.output.name}</strong>
+                            <span>${study.architecture.output.type}</span>
+                        </div>
+                    </div>
+                </figure>
+            ` : ""}
             <div class="deep-dive-sections">
                 ${study.sections.map((section) => `
                     <section>
@@ -714,26 +833,6 @@ function renderDesignExperience() {
     `;
 }
 
-function renderSkillBars() {
-    const skillBars = document.querySelector(".skill-bars");
-
-    if (!skillBars) {
-        return;
-    }
-
-    skillBars.innerHTML = portfolio.skillBars.map((skill) => `
-        <div class="skill-bar">
-            <div class="skill-bar-label">
-                <span>${skill.label}</span>
-                <strong>${skill.level}%</strong>
-            </div>
-            <div class="skill-track">
-                <span class="skill-fill level-${skill.level}"></span>
-            </div>
-        </div>
-    `).join("");
-}
-
 function renderExperience() {
     const experienceGrid = document.querySelector(".experience-grid");
 
@@ -747,6 +846,7 @@ function renderExperience() {
                 <p>${item.dates}</p>
                 <h3>${item.company}</h3>
                 <strong>${item.role}</strong>
+                ${item.progression ? `<span class="experience-progression">${item.progression}</span>` : ""}
             </div>
             <ul>
                 ${item.highlights.map((highlight) => `<li>${highlight}</li>`).join("")}
@@ -802,27 +902,36 @@ function setupContactActions() {
     });
 }
 
-function animateCounters() {
-    const counters = document.querySelectorAll("[data-count]");
+function setupMobileNavigation() {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navigation = document.querySelector(".nav-links");
 
-    counters.forEach((counter) => {
-        const target = Number(counter.dataset.count);
-        const isDecimal = !Number.isInteger(target);
-        const duration = 1200;
-        const start = performance.now();
+    if (!menuToggle || !navigation) {
+        return;
+    }
 
-        function tick(now) {
-            const progress = Math.min((now - start) / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 3);
-            const value = target * eased;
-            counter.textContent = isDecimal ? value.toFixed(1) : Math.round(value).toString();
+    const closeMenu = () => {
+        menuToggle.setAttribute("aria-expanded", "false");
+        navigation.classList.remove("is-open");
+    };
 
-            if (progress < 1) {
-                requestAnimationFrame(tick);
-            }
+    menuToggle.addEventListener("click", () => {
+        const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!isOpen));
+        navigation.classList.toggle("is-open", !isOpen);
+    });
+
+    navigation.addEventListener("click", (event) => {
+        if (event.target.closest("a")) {
+            closeMenu();
         }
+    });
 
-        requestAnimationFrame(tick);
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            closeMenu();
+            menuToggle.focus();
+        }
     });
 }
 
@@ -872,13 +981,12 @@ function initPortfolio() {
     renderFeaturedCase();
     renderGMProjects();
     renderDeepDives();
-    renderSkillBars();
     renderSkills();
     renderExperience();
     renderProcess();
+    setupMobileNavigation();
     setupContactActions();
     setupRevealAnimations();
-    animateCounters();
     settleInitialHash();
 }
 

@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Portfolio for Shaina Gonzales, a full-stack software engineer specializing in frontend, backend, UX/UI, data, and AI-driven applications.">
     <title>Shaina Gonzales | Full-Stack Software Engineer & UX/UI Portfolio</title>
-    <link rel="stylesheet" href="Style.css?v=20260729-about-panel">
-    <script src="Script.js?v=20260728-tad-case-study" defer></script>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="Style.css?v=20260729-contact-signature">
+    <script src="Script.js?v=20260729-mobile-navigation" defer></script>
 </head>
 <body>
     <div id="portfolio-app" data-component="portfolio-shell">
@@ -15,7 +16,11 @@
             <a class="brand" href="#home" aria-label="Shaina Gonzales home">
                 <img src="brand-logo.png" alt="Shaina Gonzales">
             </a>
-            <nav class="nav-links" aria-label="Portfolio sections">
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="portfolio-navigation">
+                <span class="menu-toggle-icon" aria-hidden="true"></span>
+                <span>Menu</span>
+            </button>
+            <nav class="nav-links" id="portfolio-navigation" aria-label="Portfolio sections">
                 <a href="#work">GM Projects</a>
                 <a href="#case-studies">Case Studies</a>
                 <a href="#design">UX/UI Design</a>
@@ -36,20 +41,6 @@
                         <a class="button button-primary" href="#work">See Project Proof</a>
                         <a class="button button-secondary" href="mailto:shaina.gonzales@outlook.com">Email Shaina</a>
                     </div>
-                    <dl class="hero-proof" aria-label="Portfolio proof points">
-                        <div>
-                            <dt data-count="6">0</dt>
-                            <dd>GM software areas</dd>
-                        </div>
-                        <div>
-                            <dt data-count="3.5">0</dt>
-                            <dd>years full-stack delivery</dd>
-                        </div>
-                        <div>
-                            <dt data-count="100">0</dt>
-                            <dd>frontend-to-backend range</dd>
-                        </div>
-                    </dl>
                 </div>
 
                 <aside class="about-panel reveal" id="about" aria-labelledby="about-title">
@@ -67,6 +58,64 @@
                         </section>
                     </div>
                 </aside>
+            </section>
+
+            <section class="section evolution-section" id="evolution" aria-labelledby="evolution-title">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Evolution of Practice</p>
+                    <h2 id="evolution-title">From visual storytelling to end-to-end product engineering.</h2>
+                    <p>Each discipline expanded how I solve problems, giving me the range to move from understanding people and shaping an experience to building the systems behind it.</p>
+                </div>
+                <ol class="evolution-timeline" aria-label="Career evolution from graphic design to product engineering">
+                    <li class="evolution-step reveal">
+                        <div class="evolution-card">
+                            <span class="evolution-era">Foundation</span>
+                            <h3>Graphic Design</h3>
+                            <p>Visual communication, hierarchy, and brand storytelling.</p>
+                        </div>
+                        <span class="evolution-marker" aria-hidden="true">01</span>
+                    </li>
+                    <li class="evolution-step reveal">
+                        <div class="evolution-card">
+                            <span class="evolution-era">Human-Centered</span>
+                            <h3>UX/UI Designer</h3>
+                            <p>Research, interaction systems, and intuitive prototypes.</p>
+                        </div>
+                        <span class="evolution-marker" aria-hidden="true">02</span>
+                    </li>
+                    <li class="evolution-step reveal">
+                        <div class="evolution-card">
+                            <span class="evolution-era">Building</span>
+                            <h3>Software Engineer</h3>
+                            <p>Turning product intent into reliable production experiences.</p>
+                        </div>
+                        <span class="evolution-marker" aria-hidden="true">03</span>
+                    </li>
+                    <li class="evolution-step reveal">
+                        <div class="evolution-card">
+                            <span class="evolution-era">End to End</span>
+                            <h3>Full-Stack Developer</h3>
+                            <p>Connecting interfaces, services, APIs, and data workflows.</p>
+                        </div>
+                        <span class="evolution-marker" aria-hidden="true">04</span>
+                    </li>
+                    <li class="evolution-step reveal">
+                        <div class="evolution-card">
+                            <span class="evolution-era">Scaling</span>
+                            <h3>AI &amp; Enterprise Applications</h3>
+                            <p>Automation and intelligent workflows for complex organizations.</p>
+                        </div>
+                        <span class="evolution-marker" aria-hidden="true">05</span>
+                    </li>
+                    <li class="evolution-step evolution-step-current reveal">
+                        <div class="evolution-card">
+                            <span class="evolution-era">Now &amp; Next</span>
+                            <h3>Product Engineer</h3>
+                            <p>Owning outcomes from early concept through shipped product.</p>
+                        </div>
+                        <span class="evolution-marker" aria-hidden="true">06</span>
+                    </li>
+                </ol>
             </section>
 
             <section class="section impact-section" aria-label="Impact snapshot">
@@ -137,6 +186,42 @@
                         </div>
                     </article>
                 </div>
+                <article class="design-system-feature reveal" aria-labelledby="nova-system-title">
+                    <a class="design-system-visual" href="https://www.figma.com/design/F7BbXAhoAhKdo1ySdAKNY7/nova-style-system?node-id=5-844&amp;t=Sac2vEKOdGaL2tzS-1" target="_blank" rel="noopener noreferrer" aria-label="Explore the Nova design system in Figma">
+                        <img src="nova-design-system-reframed.png" alt="Overview of the Nova design system showing coordinated dark and light themes, foundations, components, wireframes, and dashboard examples" width="981" height="1200">
+                        <span>Independent portfolio design system</span>
+                    </a>
+                    <div class="design-system-copy">
+                        <div>
+                            <p class="eyebrow">Featured Design System</p>
+                            <h3 id="nova-system-title">Nova Dual-Mode Product Design System</h3>
+                            <p class="design-system-intro">A reusable Figma system that carries product ideas from low-fidelity structure to polished, production-ready interfaces across coordinated light and dark themes.</p>
+                        </div>
+                        <dl class="design-system-facts">
+                            <div>
+                                <dt>Role</dt>
+                                <dd>Product Designer &amp; Design System Creator</dd>
+                            </div>
+                            <div>
+                                <dt>Built For</dt>
+                                <dd>Consistency, accessibility, scalability, and developer handoff</dd>
+                            </div>
+                        </dl>
+                        <div class="system-scope" aria-label="Design system coverage">
+                            <span>Light + dark foundations</span>
+                            <span>Typography system</span>
+                            <span>Semantic color palettes</span>
+                            <span>Wireframe components</span>
+                            <span>High-fidelity UI states</span>
+                            <span>Photography + iconography</span>
+                        </div>
+                        <div class="system-application">
+                            <strong>Applied Example</strong>
+                            <p>The NovaPulse analytics dashboard demonstrates how the tokens, components, data visualization patterns, and interaction hierarchy work together in a complex product surface.</p>
+                        </div>
+                        <a class="button button-primary" href="https://www.figma.com/design/F7BbXAhoAhKdo1ySdAKNY7/nova-style-system?node-id=5-844&amp;t=Sac2vEKOdGaL2tzS-1" target="_blank" rel="noopener noreferrer">Explore Design System</a>
+                    </div>
+                </article>
             </section>
 
             <section class="section work-section" id="work">
@@ -159,8 +244,14 @@
                         <span>Enterprise delivery, stakeholder workflows, scalable product thinking</span>
                     </article>
                 </div>
-                <div class="featured-case"></div>
-                <div class="case-study-grid" aria-label="Additional General Motors case studies"></div>
+                <div class="featured-case" aria-label="Featured product case studies"></div>
+                <div class="additional-projects reveal">
+                    <div class="additional-projects-heading">
+                        <p class="eyebrow">Additional Enterprise Systems</p>
+                        <h3>More products across communications, infrastructure, and analytics.</h3>
+                    </div>
+                    <div class="case-study-grid" aria-label="Additional General Motors projects"></div>
+                </div>
             </section>
 
             <section class="section deep-dive-section" id="case-studies">
@@ -178,9 +269,37 @@
                     <h2>A product-minded engineering stack with design judgment built in.</h2>
                 </div>
                 <div class="skills-dashboard">
-                    <div class="skill-chart-panel reveal">
-                        <h3>Strength Distribution</h3>
-                        <div class="skill-bars"></div>
+                    <div class="capability-map-panel reveal">
+                        <div class="capability-map-heading">
+                            <p class="eyebrow">Design + Engineering</p>
+                            <h3>Where my disciplines connect</h3>
+                        </div>
+                        <div class="capability-map" aria-label="Shaina's connected design and engineering capabilities">
+                            <svg class="capability-links" viewBox="0 0 700 500" aria-hidden="true" preserveAspectRatio="none">
+                                <line x1="350" y1="250" x2="350" y2="58"></line>
+                                <line x1="350" y1="250" x2="555" y2="105"></line>
+                                <line x1="350" y1="250" x2="620" y2="250"></line>
+                                <line x1="350" y1="250" x2="555" y2="395"></line>
+                                <line x1="350" y1="250" x2="350" y2="442"></line>
+                                <line x1="350" y1="250" x2="145" y2="395"></line>
+                                <line x1="350" y1="250" x2="80" y2="250"></line>
+                                <line x1="350" y1="250" x2="145" y2="105"></line>
+                            </svg>
+                            <div class="capability-core" aria-hidden="true">
+                                <strong>Shaina</strong>
+                                <span>Design + Engineering</span>
+                            </div>
+                            <ul class="capability-nodes">
+                                <li class="capability-node node-ux"><span>UX Strategy</span><small>Research + systems</small></li>
+                                <li class="capability-node node-react"><span>React</span><small>Frontend</small></li>
+                                <li class="capability-node node-angular"><span>Angular</span><small>Frontend</small></li>
+                                <li class="capability-node node-sql"><span>SQL + Data</span><small>Backend</small></li>
+                                <li class="capability-node node-ai"><span>AI Workflows</span><small>Automation</small></li>
+                                <li class="capability-node node-figma"><span>Figma</span><small>Prototyping</small></li>
+                                <li class="capability-node node-python"><span>Python</span><small>Services</small></li>
+                                <li class="capability-node node-azure"><span>Azure</span><small>Cloud</small></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="tools-panel reveal">
                         <h3>Design Priorities</h3>
@@ -213,6 +332,9 @@
                     <p>Employers can reach me directly by email, phone, LinkedIn, or GitHub. I am ready for roles where engineering, UX/UI, data, and AI-driven product thinking matter.</p>
                 </div>
                 <div class="contact-card reveal">
+                    <a class="contact-signature" href="#home" aria-label="Return to the top of Shaina Gonzales's portfolio">
+                        <img src="brand-logo.png" alt="Shaina Gonzales">
+                    </a>
                     <a href="mailto:shaina.gonzales@outlook.com">shaina.gonzales@outlook.com</a>
                     <a href="tel:2604139966">(260) 413-9966</a>
                     <a href="https://www.linkedin.com/in/shainag3">LinkedIn</a>
