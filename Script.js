@@ -3,6 +3,7 @@ const portfolio = {
         email: "shaina.gonzales@outlook.com",
         phone: "(260) 413-9966",
         linkedin: "https://www.linkedin.com/in/shainag3",
+        github: "https://github.com/gonzasha345-art",
         website: "https://www.shainagonzalesdesigns.com"
     },
     impact: [
@@ -127,16 +128,18 @@ const portfolio = {
         },
         {
             title: "TAD Platform",
-            role: "API Integration & Full-Stack UX Contributor",
+            role: "API Integration & UX/UI Contributor",
             technologies: ["APIs", "JavaScript", "Slack Integrations", "Confluence Integrations", "Enterprise Workflow Systems"],
-            challenge: "GM's firewall request process historically required lengthy approval cycles and manual workflows that could take up to two months.",
+            challenge: "GM's firewall request process historically required lengthy approval cycles and manual operational workflows that could take up to two months. The TAD initiative aimed to centralize and automate the process to dramatically reduce turnaround times.",
             contributions: [
-                "Contributed to workflow planning, process visualization, and automation strategy.",
-                "Researched and integrated enterprise APIs across Slack, Confluence, Gleam, and additional systems.",
-                "Helped identify automation opportunities and supported the technical groundwork for system development."
+                "Contributed to workflow planning and process visualization.",
+                "Researched and integrated enterprise APIs across GM systems.",
+                "Worked with APIs from Slack, Confluence, Gleam, and additional enterprise platforms.",
+                "Helped identify automation opportunities and workflow improvements.",
+                "Supported the technical groundwork for TAD system development."
             ],
-            features: ["Firewall request workflows", "Enterprise API integrations", "Workflow automation", "Cross-platform orchestration", "Infrastructure request optimization"],
-            outcome: "Helped reduce firewall processing timelines from months to days through centralized workflow automation and cross-system integration planning."
+            features: ["Centralized firewall request workflows", "Enterprise API integrations", "Workflow automation systems", "Cross-platform operational connectivity", "Intelligent process orchestration", "Infrastructure request optimization"],
+            outcome: "The initiative significantly improved operational efficiency by helping reduce firewall processing timelines from months to days, creating a faster and more scalable enterprise infrastructure workflow."
         }
     ],
     deepDives: [
@@ -315,6 +318,66 @@ const portfolio = {
                 {
                     title: "Outcome",
                     text: "Improved infrastructure visibility through scalable, data-driven visual experiences for monitoring and managing global systems."
+                }
+            ]
+        },
+        {
+            id: "case-tad-platform",
+            title: "TAD Platform",
+            subtitle: "Firewall Workflow Automation System",
+            role: "API Integration & UX/UI Contributor",
+            summary: "At General Motors, I contributed to the TAD initiative to centralize and automate firewall request workflows, connect enterprise systems, and reduce operational turnaround times from months to days.",
+            sections: [
+                {
+                    title: "Company & Technologies",
+                    bullets: [
+                        "General Motors",
+                        "APIs",
+                        "JavaScript",
+                        "Slack integrations",
+                        "Confluence integrations",
+                        "Enterprise workflow systems"
+                    ]
+                },
+                {
+                    title: "The Challenge",
+                    text: "GM's firewall request process historically required lengthy approval cycles and manual operational workflows that could take up to two months to complete. The objective of the TAD initiative was to centralize and automate the process to dramatically reduce operational turnaround times."
+                },
+                {
+                    title: "My Contributions",
+                    bullets: [
+                        "Contributed to workflow planning and process visualization",
+                        "Researched and integrated enterprise APIs across GM systems",
+                        "Worked with APIs from Slack, Confluence, Gleam, and additional enterprise platforms",
+                        "Helped identify automation opportunities and workflow improvements",
+                        "Supported the technical groundwork for TAD system development"
+                    ]
+                },
+                {
+                    title: "Key Features",
+                    bullets: [
+                        "Centralized firewall request workflows",
+                        "Enterprise API integrations",
+                        "Workflow automation systems",
+                        "Cross-platform operational connectivity",
+                        "Intelligent process orchestration",
+                        "Infrastructure request optimization"
+                    ]
+                },
+                {
+                    title: "Technical & Design Focus",
+                    bullets: [
+                        "Enterprise workflow automation",
+                        "API orchestration",
+                        "Operational efficiency optimization",
+                        "Process mapping and visualization",
+                        "Intelligent infrastructure workflows",
+                        "Cross-system integration planning"
+                    ]
+                },
+                {
+                    title: "The Outcome",
+                    text: "The initiative significantly improved operational efficiency by helping reduce firewall processing timelines from months to days, creating a faster and more scalable enterprise infrastructure workflow."
                 }
             ]
         }
