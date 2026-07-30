@@ -631,28 +631,18 @@ function renderFeaturedCase() {
     const gmProject = (title) => portfolio.gmProjects.find((project) => project.title === title);
     const projects = [
         {
-            ...gmProject("Enterprise Gamification & Learning Platform"),
-            type: "gamification",
-            category: "Engagement & Learning",
-            description: "An enterprise engagement platform designed to increase participation through learning, leaderboards, events, and progress-based experiences.",
-            launchOutcome: "Modernized employee learning and participation.",
-            action: '<a class="text-link" href="https://grain-fluid-14768550.figma.site" target="_blank" rel="noopener noreferrer">Open Interactive Prototype <span aria-hidden="true">&nearr;</span></a>'
-        },
-        {
-            ...portfolio.featuredCase,
-            type: "electron",
-            category: "Enterprise AI",
-            description: "An AI assistant that made internal knowledge and workflow support faster to find through a conversational enterprise experience.",
-            launchOutcome: "Reduced time spent searching for internal information.",
-            action: caseStudyLink("Electron Chatbot")
-        },
-        {
-            ...gmProject("Broadcasting Services Event Management Platform"),
-            type: "broadcasting",
-            category: "Event Operations",
-            description: "A scheduling and administration platform for coordinating executive broadcasts and large-scale internal productions.",
-            launchOutcome: "Streamlined scheduling for high-visibility productions.",
-            action: caseStudyLink("Broadcasting Services Event Management Platform")
+            ...gmProject("TAD Platform"),
+            type: "tad",
+            category: "Workflow Automation",
+            description: "A connected enterprise workflow designed to centralize firewall requests and reduce operational turnaround from months to days.",
+            launchOutcome: "Helped reduce request turnaround from months to days.",
+            metrics: {
+                before: "Up to 2 months",
+                after: "Days",
+                sources: 3,
+                note: "Approximate outcome; sensitive production details omitted."
+            },
+            action: caseStudyLink("TAD Platform")
         },
         {
             ...gmProject("ISE Platform"),
@@ -663,16 +653,32 @@ function renderFeaturedCase() {
             action: '<div class="launch-actions"><a class="text-link" href="https://symbol-desert-66256692.figma.site" target="_blank" rel="noopener noreferrer">Open Interactive Prototype <span aria-hidden="true">&nearr;</span></a>' + caseStudyLink("ISE Platform") + '</div>'
         },
         {
-            ...gmProject("TAD Platform"),
-            type: "tad",
-            category: "Workflow Automation",
-            description: "A connected enterprise workflow designed to centralize firewall requests and reduce operational turnaround from months to days.",
-            launchOutcome: "Helped reduce request turnaround from months to days.",
-            action: caseStudyLink("TAD Platform")
+            ...portfolio.featuredCase,
+            type: "electron",
+            category: "Enterprise AI",
+            description: "An AI assistant that made internal knowledge and workflow support faster to find through a conversational enterprise experience.",
+            launchOutcome: "Reduced time spent searching for internal information.",
+            action: caseStudyLink("Electron Chatbot")
+        },
+        {
+            ...gmProject("Enterprise Gamification & Learning Platform"),
+            type: "gamification",
+            category: "Engagement & Learning",
+            description: "An enterprise engagement platform designed to increase participation through learning, leaderboards, events, and progress-based experiences.",
+            launchOutcome: "Modernized employee learning and participation.",
+            action: '<a class="text-link" href="https://grain-fluid-14768550.figma.site" target="_blank" rel="noopener noreferrer">Open Interactive Prototype <span aria-hidden="true">&nearr;</span></a>'
+        },
+        {
+            ...gmProject("Broadcasting Services Event Management Platform"),
+            type: "broadcasting",
+            category: "Event Operations",
+            description: "A scheduling and administration platform for coordinating executive broadcasts and large-scale internal productions.",
+            launchOutcome: "Streamlined scheduling for high-visibility productions.",
+            action: caseStudyLink("Broadcasting Services Event Management Platform")
         }
     ];
 
-    caseContainer.innerHTML = projects.map((project, index) => `
+    const renderProjects = (items) => items.map((project, index) => `
         <article class="launch-card reveal ${index % 2 ? "launch-card-reverse" : ""}">
             ${projectVisual(project.type)}
             <div class="launch-copy">
@@ -685,6 +691,7 @@ function renderFeaturedCase() {
                     <div><dt>My Role</dt><dd>${project.role}</dd></div>
                     <div><dt>Outcome</dt><dd>${project.launchOutcome}</dd></div>
                 </dl>
+                ${project.metrics ? impactMetrics(project.metrics) : ""}
                 <div class="project-meta">
                     ${project.technologies.slice(0, 5).map((item) => `<span>${item}</span>`).join("")}
                 </div>
@@ -692,6 +699,54 @@ function renderFeaturedCase() {
             </div>
         </article>
     `).join("");
+
+    caseContainer.innerHTML = `
+        ${renderProjects(projects.slice(0, 3))}
+        <details class="portfolio-disclosure launch-disclosure reveal">
+            <summary>
+                <span>
+                    <span class="eyebrow">More Launch Stories</span>
+                    <strong>Explore two additional products across learning and event operations.</strong>
+                </span>
+                <span class="disclosure-action">View more projects</span>
+            </summary>
+            <div class="secondary-launches">
+                ${renderProjects(projects.slice(3))}
+            </div>
+        </details>
+    `;
+}
+
+function impactMetrics(metrics) {
+    return `
+        <section class="impact-metrics" aria-label="Measured project impact">
+            <div class="impact-metrics-heading">
+                <div>
+                    <p class="case-label">Measured Impact</p>
+                    <strong>Firewall request turnaround</strong>
+                </div>
+                <span>Approx.</span>
+            </div>
+            <div class="metric-timeline" aria-label="Turnaround improved from up to two months to days">
+                <div class="metric-stage metric-stage-before">
+                    <span>Before</span>
+                    <strong>Up to <span data-kpi-count="2">0</span> months</strong>
+                    <i aria-hidden="true"></i>
+                </div>
+                <div class="metric-arrow" aria-hidden="true">→</div>
+                <div class="metric-stage metric-stage-after">
+                    <span>After</span>
+                    <strong>${metrics.after}</strong>
+                    <i aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="metric-sources">
+                <div class="metric-source-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+                <span><strong data-kpi-count="${metrics.sources}">0</strong>+ connected API sources represented</span>
+            </div>
+            <small>${metrics.note}</small>
+        </section>
+    `;
 }
 
 function renderGMProjects() {
@@ -740,6 +795,7 @@ function renderDeepDives() {
                 <span>${study.role}</span>
             </div>
             <p class="deep-dive-summary">${study.summary}</p>
+            ${study.id === "case-tad-platform" ? impactMetrics({ after: "Days", sources: study.architecture.sources.length, note: "Approximate outcome; sensitive production details omitted." }) : ""}
             ${study.architecture ? `
                 <figure class="architecture-panel" aria-labelledby="${study.id}-architecture-title">
                     <figcaption>
@@ -800,6 +856,13 @@ function renderDesignExperience() {
     }
 
     designContainer.innerHTML = `
+        <summary>
+            <span>
+                <span class="eyebrow">Enterprise Visual Design</span>
+                <strong>Explore the visual communication work that strengthened my product design practice.</strong>
+            </span>
+            <span class="disclosure-action">View design experience</span>
+        </summary>
         <article class="design-card reveal">
             <div class="design-intro">
                 <p class="case-label">Enterprise UX/UI & Visual Design</p>
@@ -935,6 +998,82 @@ function setupMobileNavigation() {
     });
 }
 
+function setupPortfolioDisclosures() {
+    const openHashTarget = () => {
+        if (!window.location.hash) {
+            return;
+        }
+
+        const target = document.querySelector(window.location.hash);
+        const disclosure = target?.closest("details.portfolio-disclosure")
+            || (target?.matches("section") ? target.querySelector("details.portfolio-disclosure") : null);
+
+        if (disclosure) {
+            disclosure.open = true;
+        }
+    };
+
+    document.addEventListener("click", (event) => {
+        const link = event.target.closest('a[href^="#"]');
+
+        if (link) {
+            window.setTimeout(openHashTarget, 0);
+        }
+    });
+
+    window.addEventListener("hashchange", openHashTarget);
+    openHashTarget();
+}
+
+function animateKpiCounters() {
+    const metricGroups = document.querySelectorAll(".impact-metrics");
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const animate = (counter) => {
+        const target = Number(counter.dataset.kpiCount);
+
+        if (reduceMotion) {
+            counter.textContent = String(target);
+            return;
+        }
+
+        const start = performance.now();
+        const duration = 700;
+
+        const tick = (now) => {
+            const progress = Math.min((now - start) / duration, 1);
+            counter.textContent = String(Math.round(target * (1 - Math.pow(1 - progress, 3))));
+
+            if (progress < 1) {
+                requestAnimationFrame(tick);
+            }
+        };
+
+        requestAnimationFrame(tick);
+    };
+
+    const activate = (group) => {
+        group.classList.add("is-animated");
+        group.querySelectorAll("[data-kpi-count]").forEach(animate);
+    };
+
+    if (!("IntersectionObserver" in window) || reduceMotion) {
+        metricGroups.forEach(activate);
+        return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                activate(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.6 });
+
+    metricGroups.forEach((group) => observer.observe(group));
+}
+
 function setupRevealAnimations() {
     const revealItems = document.querySelectorAll(".reveal");
 
@@ -984,6 +1123,8 @@ function initPortfolio() {
     renderSkills();
     renderExperience();
     renderProcess();
+    animateKpiCounters();
+    setupPortfolioDisclosures();
     setupMobileNavigation();
     setupContactActions();
     setupRevealAnimations();
