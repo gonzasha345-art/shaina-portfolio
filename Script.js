@@ -294,6 +294,10 @@ const portfolio = {
             subtitle: "Infrastructure Analytics & Visualization Dashboard",
             role: "UX/UI Designer & Full-Stack Developer",
             summary: "A deeper case study for proving data visualization, backend collaboration, analytics thinking, and technical dashboard experience.",
+            prototype: {
+                label: "Open Interactive Figma Prototype",
+                href: "https://symbol-desert-66256692.figma.site"
+            },
             sections: [
                 {
                     title: "Problem",
@@ -795,6 +799,7 @@ function renderDeepDives() {
                 <span>${study.role}</span>
             </div>
             <p class="deep-dive-summary">${study.summary}</p>
+            ${study.prototype ? `<div class="launch-actions deep-dive-actions"><a class="text-link" href="${study.prototype.href}" target="_blank" rel="noopener noreferrer">${study.prototype.label} <span aria-hidden="true">&nearr;</span></a></div>` : ""}
             ${study.id === "case-tad-platform" ? impactMetrics({ after: "Days", sources: study.architecture.sources.length, note: "Approximate outcome; sensitive production details omitted." }) : ""}
             ${study.architecture ? `
                 <figure class="architecture-panel" aria-labelledby="${study.id}-architecture-title">
