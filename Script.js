@@ -149,6 +149,10 @@ const portfolio = {
             subtitle: "Enterprise AI Assistant Platform",
             role: "Full-Stack Developer & UX/UI Lead",
             summary: "At General Motors, I contributed to the development and implementation of one of the company's first enterprise AI chatbot platforms, known internally as Electron Chatbot. The project integrated large language model capabilities into the GM workplace environment to improve employee efficiency, accelerate information retrieval, and modernize internal workflows through AI-driven assistance.",
+            prototype: {
+                label: "Explore the AI Chatbot Figma Prototype",
+                href: "https://www.figma.com/design/PECexQvNxp0jLedKtJRZZk/ai-chat-bot?node-id=3-3&t=xt8KgkJXdxjnDGiD-1"
+            },
             sections: [
                 {
                     title: "Enterprise Problem",
@@ -662,7 +666,7 @@ function renderFeaturedCase() {
             category: "Enterprise AI",
             description: "An AI assistant that made internal knowledge and workflow support faster to find through a conversational enterprise experience.",
             launchOutcome: "Reduced time spent searching for internal information.",
-            action: caseStudyLink("Electron Chatbot")
+            action: '<div class="launch-actions"><a class="text-link" href="https://www.figma.com/design/PECexQvNxp0jLedKtJRZZk/ai-chat-bot?node-id=3-3&t=xt8KgkJXdxjnDGiD-1" target="_blank" rel="noopener noreferrer">Explore Figma Prototype <span aria-hidden="true">&nearr;</span></a>' + caseStudyLink("Electron Chatbot") + '</div>'
         },
         {
             ...gmProject("Enterprise Gamification & Learning Platform"),
