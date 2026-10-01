@@ -300,7 +300,7 @@ const portfolio = {
             summary: "A deeper case study for proving data visualization, backend collaboration, analytics thinking, and technical dashboard experience.",
             prototype: {
                 label: "Open Interactive Figma Prototype",
-                href: "https://symbol-desert-66256692.figma.site"
+                href: "https://www.figma.com/make/Jo6o4zhUv1Y7vPxtPbuwIl/iseexampleprototype?t=HNOiXZn6KcWP4UDI-20&fullscreen=1"
             },
             sections: [
                 {
@@ -581,7 +581,7 @@ function projectVisual(type) {
 
     if (type === "ise") {
         return `
-            <a class="launch-visual launch-visual-image" href="https://symbol-desert-66256692.figma.site" target="_blank" rel="noopener noreferrer" aria-label="Open the representative ISE infrastructure dashboard prototype">
+            <a class="launch-visual launch-visual-image" href="https://www.figma.com/make/Jo6o4zhUv1Y7vPxtPbuwIl/iseexampleprototype?t=HNOiXZn6KcWP4UDI-20&fullscreen=1" target="_blank" rel="noopener noreferrer" aria-label="Open the representative ISE infrastructure dashboard prototype">
                 <img src="ise-dashboard-concept.png" alt="Representative ISE infrastructure dashboard showing active nodes, uptime, IP addresses, cluster health, a global topology map, and network analytics" width="1459" height="768" loading="lazy">
                 <span class="concept-label">Independent portfolio concept</span>
             </a>
@@ -658,7 +658,7 @@ function renderFeaturedCase() {
             category: "Infrastructure Analytics",
             description: "A global infrastructure dashboard designed to make node health, IP systems, clusters, topology, and network activity easier to monitor.",
             launchOutcome: "Improved visibility across complex infrastructure environments.",
-            action: '<div class="launch-actions"><a class="text-link" href="https://symbol-desert-66256692.figma.site" target="_blank" rel="noopener noreferrer">Open Interactive Prototype <span aria-hidden="true">&nearr;</span></a>' + caseStudyLink("ISE Platform") + '</div>'
+            action: '<div class="launch-actions"><a class="text-link" href="https://www.figma.com/make/Jo6o4zhUv1Y7vPxtPbuwIl/iseexampleprototype?t=HNOiXZn6KcWP4UDI-20&fullscreen=1" target="_blank" rel="noopener noreferrer">Open Interactive Prototype <span aria-hidden="true">&nearr;</span></a>' + caseStudyLink("ISE Platform") + '</div>'
         },
         {
             ...portfolio.featuredCase,
