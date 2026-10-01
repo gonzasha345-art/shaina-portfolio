@@ -151,6 +151,17 @@ a {
     box-shadow: 0 14px 28px rgba(77, 20, 125, 0.2);
 }
 
+.resume-actions {
+    display: flex;
+    flex: 0 0 auto;
+    gap: 8px;
+}
+
+.header-action-secondary {
+    color: var(--violet-deep);
+    background: rgba(255, 250, 241, 0.92);
+}
+
 .header-action:hover,
 .button:hover,
 .copy-email:hover {
@@ -2373,6 +2384,11 @@ h3 {
         font-size: 0.82rem;
     }
 
+    .header-action {
+        padding-inline: 11px;
+        font-size: 0.76rem;
+    }
+
     .hero,
     .case-feature,
     .design-card,
@@ -2519,6 +2535,7 @@ h3 {
 }
 
 @media (max-width: 800px) {
+    .resume-actions,
     .header-action {
         display: none;
     }

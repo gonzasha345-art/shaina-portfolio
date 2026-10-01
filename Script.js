@@ -13,9 +13,9 @@ const portfolio = {
             text: "Selected highlights from a broader GM portfolio: AI assistants, event platforms, learning tools, communications, dashboards, and automation."
         },
         {
-            value: "3.5",
-            title: "Years at General Motors",
-            text: "Hands-on delivery inside enterprise environments with product, engineering, data, and stakeholder complexity."
+            value: "7+",
+            title: "Years of Experience",
+            text: "Technical delivery across full-stack development, enterprise APIs, SQL-backed workflows, automation, data products, and UX/UI systems."
         },
         {
             value: "2 mo to days",
@@ -128,18 +128,18 @@ const portfolio = {
         },
         {
             title: "TAD Platform",
-            role: "API Integration & UX/UI Contributor",
-            technologies: ["APIs", "JavaScript", "Slack Integrations", "Confluence Integrations", "Enterprise Workflow Systems"],
-            challenge: "GM's firewall request process historically required lengthy approval cycles and manual operational workflows that could take up to two months. The TAD initiative aimed to centralize and automate the process to dramatically reduce turnaround times.",
+            role: "API Integration & Workflow Automation Contributor",
+            technologies: ["Enterprise APIs", "JavaScript", "Slack API", "Confluence API", "Workflow Orchestration"],
+            challenge: "GM's firewall request process depended on lengthy approval cycles, disconnected enterprise systems, and manual operational handoffs that could take up to two months. TAD was designed to centralize the workflow, connect its supporting systems, and create a more automated technical path from request to outcome.",
             contributions: [
-                "Contributed to workflow planning and process visualization.",
-                "Researched and integrated enterprise APIs across GM systems.",
-                "Worked with APIs from Slack, Confluence, Gleam, and additional enterprise platforms.",
-                "Helped identify automation opportunities and workflow improvements.",
-                "Supported the technical groundwork for TAD system development."
+                "Mapped the end-to-end firewall request flow, system handoffs, dependencies, and automation opportunities.",
+                "Researched and supported enterprise API integrations across GM systems.",
+                "Worked with Slack, Confluence, Gleam, and additional enterprise platform APIs.",
+                "Contributed JavaScript and integration-focused technical work supporting the connected workflow.",
+                "Helped establish the orchestration groundwork for a faster, more scalable request process."
             ],
-            features: ["Centralized firewall request workflows", "Enterprise API integrations", "Workflow automation systems", "Cross-platform operational connectivity", "Intelligent process orchestration", "Infrastructure request optimization"],
-            outcome: "The initiative significantly improved operational efficiency by helping reduce firewall processing timelines from months to days, creating a faster and more scalable enterprise infrastructure workflow."
+            features: ["Centralized request workflow", "Enterprise API integrations", "Cross-system orchestration", "Automated operational handoffs", "Connected knowledge and collaboration tools", "Infrastructure request optimization"],
+            outcome: "The connected technical workflow helped reduce firewall processing timelines from as long as two months to days while creating a more scalable foundation for enterprise infrastructure requests."
         }
     ],
     deepDives: [
@@ -149,6 +149,10 @@ const portfolio = {
             subtitle: "Enterprise AI Assistant Platform",
             role: "Full-Stack Developer & UX/UI Lead",
             summary: "At General Motors, I contributed to the development and implementation of one of the company's first enterprise AI chatbot platforms, known internally as Electron Chatbot. The project integrated large language model capabilities into the GM workplace environment to improve employee efficiency, accelerate information retrieval, and modernize internal workflows through AI-driven assistance.",
+            prototype: {
+                label: "Explore the AI Chatbot Figma Prototype",
+                href: "https://www.figma.com/design/PECexQvNxp0jLedKtJRZZk/ai-chat-bot?node-id=3-3&t=xt8KgkJXdxjnDGiD-1"
+            },
             sections: [
                 {
                     title: "Enterprise Problem",
@@ -294,6 +298,10 @@ const portfolio = {
             subtitle: "Infrastructure Analytics & Visualization Dashboard",
             role: "UX/UI Designer & Full-Stack Developer",
             summary: "A deeper case study for proving data visualization, backend collaboration, analytics thinking, and technical dashboard experience.",
+            prototype: {
+                label: "Open Interactive Figma Prototype",
+                href: "https://symbol-desert-66256692.figma.site"
+            },
             sections: [
                 {
                     title: "Problem",
@@ -325,8 +333,8 @@ const portfolio = {
             id: "case-tad-platform",
             title: "TAD Platform",
             subtitle: "Firewall Workflow Automation System",
-            role: "API Integration & UX/UI Contributor",
-            summary: "At General Motors, I contributed to the TAD initiative to centralize and automate firewall request workflows, connect enterprise systems, and reduce operational turnaround times from months to days.",
+            role: "API Integration & Workflow Automation Contributor",
+            summary: "At General Motors, I contributed to the technical foundation of TAD: a connected workflow that brought enterprise APIs, JavaScript, collaboration tools, knowledge systems, and orchestration together to move firewall requests from manual handoffs toward an automated process measured in days rather than months.",
             architecture: {
                 title: "System at a Glance",
                 description: "A conceptual view of the integration pattern I supported. Production implementation details are intentionally omitted.",
@@ -343,35 +351,35 @@ const portfolio = {
                     title: "Company & Technologies",
                     bullets: [
                         "General Motors",
-                        "APIs",
+                        "Enterprise APIs",
                         "JavaScript",
-                        "Slack integrations",
-                        "Confluence integrations",
-                        "Enterprise workflow systems"
+                        "Slack API integration",
+                        "Confluence API integration",
+                        "Cross-system workflow orchestration"
                     ]
                 },
                 {
                     title: "The Challenge",
-                    text: "GM's firewall request process historically required lengthy approval cycles and manual operational workflows that could take up to two months to complete. The objective of the TAD initiative was to centralize and automate the process to dramatically reduce operational turnaround times."
+                    text: "GM's firewall request process relied on lengthy approval cycles, disconnected sources, and manual handoffs that could take up to two months. The technical challenge was to connect collaboration, knowledge, intelligence, and infrastructure workflows without exposing sensitive production details, then create a centralized orchestration path that could scale."
                 },
                 {
                     title: "My Contributions",
                     bullets: [
-                        "Contributed to workflow planning and process visualization",
-                        "Researched and integrated enterprise APIs across GM systems",
-                        "Worked with APIs from Slack, Confluence, Gleam, and additional enterprise platforms",
-                        "Helped identify automation opportunities and workflow improvements",
-                        "Supported the technical groundwork for TAD system development"
+                        "Mapped the end-to-end request flow, technical dependencies, system handoffs, and automation opportunities",
+                        "Researched and supported enterprise API integrations across GM systems",
+                        "Worked with Slack, Confluence, Gleam, and additional enterprise platform APIs",
+                        "Contributed JavaScript and integration-focused implementation work",
+                        "Helped establish the orchestration groundwork for a faster, scalable firewall workflow"
                     ]
                 },
                 {
                     title: "Key Features",
                     bullets: [
-                        "Centralized firewall request workflows",
+                        "Centralized firewall request workflow",
                         "Enterprise API integrations",
-                        "Workflow automation systems",
-                        "Cross-platform operational connectivity",
-                        "Intelligent process orchestration",
+                        "Cross-system workflow orchestration",
+                        "Automated operational handoffs",
+                        "Connected collaboration and knowledge sources",
                         "Infrastructure request optimization"
                     ]
                 },
@@ -380,15 +388,15 @@ const portfolio = {
                     bullets: [
                         "Enterprise workflow automation",
                         "API orchestration",
-                        "Operational efficiency optimization",
-                        "Process mapping and visualization",
-                        "Intelligent infrastructure workflows",
-                        "Cross-system integration planning"
+                        "JavaScript integration work",
+                        "System and dependency mapping",
+                        "Cross-platform data flow planning",
+                        "Scalable infrastructure workflows"
                     ]
                 },
                 {
                     title: "The Outcome",
-                    text: "The initiative significantly improved operational efficiency by helping reduce firewall processing timelines from months to days, creating a faster and more scalable enterprise infrastructure workflow."
+                    text: "The connected technical workflow helped reduce firewall processing timelines from as long as two months to days, replacing fragmented manual coordination with a faster and more scalable foundation for enterprise infrastructure requests."
                 }
             ]
         }
@@ -633,9 +641,9 @@ function renderFeaturedCase() {
         {
             ...gmProject("TAD Platform"),
             type: "tad",
-            category: "Workflow Automation",
-            description: "A connected enterprise workflow designed to centralize firewall requests and reduce operational turnaround from months to days.",
-            launchOutcome: "Helped reduce request turnaround from months to days.",
+            category: "API Integration & Workflow Automation",
+            description: "A JavaScript- and API-connected enterprise workflow that brought collaboration, knowledge, intelligence, and firewall request systems into one orchestration path.",
+            launchOutcome: "Connected enterprise systems and helped move request turnaround from months to days.",
             metrics: {
                 before: "Up to 2 months",
                 after: "Days",
@@ -658,7 +666,7 @@ function renderFeaturedCase() {
             category: "Enterprise AI",
             description: "An AI assistant that made internal knowledge and workflow support faster to find through a conversational enterprise experience.",
             launchOutcome: "Reduced time spent searching for internal information.",
-            action: caseStudyLink("Electron Chatbot")
+            action: '<div class="launch-actions"><a class="text-link" href="https://www.figma.com/design/PECexQvNxp0jLedKtJRZZk/ai-chat-bot?node-id=3-3&t=xt8KgkJXdxjnDGiD-1" target="_blank" rel="noopener noreferrer">Explore Figma Prototype <span aria-hidden="true">&nearr;</span></a>' + caseStudyLink("Electron Chatbot") + '</div>'
         },
         {
             ...gmProject("Enterprise Gamification & Learning Platform"),
@@ -795,6 +803,7 @@ function renderDeepDives() {
                 <span>${study.role}</span>
             </div>
             <p class="deep-dive-summary">${study.summary}</p>
+            ${study.prototype ? `<div class="launch-actions deep-dive-actions"><a class="text-link" href="${study.prototype.href}" target="_blank" rel="noopener noreferrer">${study.prototype.label} <span aria-hidden="true">&nearr;</span></a></div>` : ""}
             ${study.id === "case-tad-platform" ? impactMetrics({ after: "Days", sources: study.architecture.sources.length, note: "Approximate outcome; sensitive production details omitted." }) : ""}
             ${study.architecture ? `
                 <figure class="architecture-panel" aria-labelledby="${study.id}-architecture-title">
